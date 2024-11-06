@@ -1,0 +1,52 @@
+job_name = *staging* host="jenkins-cb.regeneron.regn.com-ritdev"
+
+index==* <agent> or index=* pod=*vv-maven-rndp* -> index for searching jenkins agent in splunk
+
+cluster_name ="eks-prod-apps" namespace ="redhat-sso-production"
+
+index=wineventlog_ad "svc.adjoinaws" -> use this query if u want to know details on svc account or user accounts
+
+index=wineventlog_ad "svc.adconnector" eventtype=windows_logon_success
+
+index=wineventlog_ad_stats user IN ("svc.adconnector",svc.adjoinaws) EventCode IN (""*"") EventCode=4624 
+| table user First Last src count status
+
+index=jenkins_console | where isnotnull(host) AND isnotnull(job_name) AND isnotnull(git_repo) |dedup job_name | table host, job_name, git_repo |sort host - to see all the jobs of all controllers
+
+index=jenkins_console | where isnotnull(host) AND isnotnull(job_name) AND isnotnull(git_repo)  | search host="jenkins-cb.regeneron.regn.com-devops" | dedup job_name  | table  host, job_name, git_repo  | sort  host - to see particular controller
+
+
+https://regeneron.splunkcloud.com/en-US/app/search/search - splunk link of regeneron.
+
+(index=jenkins_console host=* job_name=* ) OR (index=jenkins* sourcetype="json:jenkins" build_url=* )  "*<keyword>*"
+
+(index=jenkins_console host=* job_name=* ) OR (index=jenkins* sourcetype="json:jenkins" build_url=* )  "*sonar.regenron.com*"
+
+index=*jenkins_console* keyword to search
+
+index=eks cluster_name="eks-prod" pod=*java12* container_image="145032978487.dkr.ecr.us-east-1.amazonaws.com/radit-jenkins-agent-java-12:17"
+
+pod =*mwaa-dev* namespace="radit-ci-rdp"
+
+namespace="radit-ci-rdp" agent="KubernetesSlave name: mwaa-dev-63tn5"
+
+index="jenkins_console" ModuleNotFoundError: No module named 'psycopg2
+index=eks cluster_name="eks-prod" namespace="radit-ci" name="'Controllers health checks'"
+index=eks cluster_name="eks-prod" namespace="radit-ci"
+
+
+Indexes for testing the jenkins jobs issue
+index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops job_name = Add-Managed-Master-Users Finished
+index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops job_name = Add-Managed-Master-Users (give username here for the link of the pipeline job to come)
+index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops source="job/onboarding-cloudbees/job/Add-Managed-Master-Users/2365/console" -> if u want the whole logs of the job use this query
+
+index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops job_name = cloudbees-management Finished: FAILURE
+index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops job_name = cloudbees-management source="job/ServiceNowAutomation/job/cloudbees-management/66862/console"
+ 
+index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops job_name = cloudbees-management FINISHED:
+index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops job_name =Add-Managed-Master-Users FINISHED:
+has context menu
+
+
+
+
