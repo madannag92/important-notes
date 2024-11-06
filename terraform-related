@@ -1,0 +1,28 @@
+This helps in setting the terraform version, which is below piece of code
+
+TFENV_TERRAFORM_VERSION=1.4.6 terraform init -input=false
+ TFENV_TERRAFORM_VERSION=1.4.6 terraform plan -input=false -no-color
+  TFENV_TERRAFORM_VERSION=1.4.6 terraform apply -input=false -auto-approve -no-color
+
+Below is a example stage for it
+stages { 
+    stage('K8s cluster creation') {
+       steps {
+         
+           script {
+            def awsUtil = new AwsUtil()
+            awsUtil.withAccountRoleArn(accountArn, region, {
+            sh """#!/bin/bash
+            set
+            cd terraform/eks/deployments/prd/corpit/cluster
+            TFENV_TERRAFORM_VERSION=1.4.6 terraform init -input=false
+            TFENV_TERRAFORM_VERSION=1.4.6 terraform plan -input=false -no-color
+            TFENV_TERRAFORM_VERSION=1.4.6 terraform apply -input=false -auto-approve -no-color
+            """
+         })
+        }
+
+
+terraform state "rm module.aws_s3_bucket_versioning.versioning[\"rajesh-s3"\]"-> to remove a state file if stuck in jenkins. The one in the bracket is the bucketname
+
+sh "terraform apply -var='aws_account=154919775133' -auto-approve"
