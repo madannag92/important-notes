@@ -1,0 +1,20 @@
+println(hudson.util.Secret.fromString("{XXX}").getPlainText()) ->>XXX is where u need to place the credential from jenkins and need to run this in script console in jenkins
+
+ stage('SCM to build') {
+        git credentialsId: 'bitbucket-access',
+                url: 'ssh://git@ritscm.regeneron.com/ritiac/ecr-automation.git',
+                branch: 'master'
+---------------------------------------
+Sonarqube stage scan
+ stage("SonarQube analysis") { 
+            def scannerHome = tool 'SonarQubeScanner';
+            withSonarQubeEnv(credentialsId: 'sonarqube-auth-token') { 
+                sh """
+                  $scannerHome/bin/sonar-scanner \
+                    -Dsonar.projectKey=tppm-web-frontend \
+                    -Dsonar.sources=. \
+                    -Dsonar.host.url=https://sonar.regeneron.regn.com \
+                """  
+            }
+        }
+---------------------------
