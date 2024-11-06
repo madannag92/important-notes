@@ -55,3 +55,30 @@ where ever corretto was installed lib/security/cacerts
 this is the standard location for the trust store
 free -g 
 Tail -100f web.log
+------------------------------------
+
+
+Removing the jdk 1.8 version
+
+  java --version
+ 1002  alternatives --config java
+ 1003  cd /usr/java
+ 1004  ls -ltra
+ 1005  rpm -qa jdk*
+ 1006  echo java $HOME
+ 1007  echo $JAVA_HOME
+ 1008  which java
+ 1009  cd jdk-11.0.2/
+ 1010  ll
+ 1011  pwd
+ 1012  export JAVA_HOME=/usr/java/jdk-11.0.2/bin -> for setting java home
+ 1013  echo $JAVA_HOME
+ 1014  cd ..
+ 1015  pwd
+ 1016  ll
+ 1017  dpkg -l | grep openjdk
+ 1018  rpm -qa | grep java
+ 1019  rpm -qa | grep jdk
+ 1020  rpm -e jdk1.8.0_144-1.8.0_144-fcs.x86_64
+ 1021  rpm -qa | grep jdk
+
