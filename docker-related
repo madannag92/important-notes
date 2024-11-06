@@ -1,0 +1,29 @@
+
+
+
+in aws console...when u select dat image..click on push commands...u wl get command
+1.aws ecr get-login-password --region us-east-1
+2.docker login --username AWS  154919775133.dkr.ecr.us-east-1.amazonaws.com
+it wl ask password,enter pass what you got in 1st command
+
+
+
+3.docker pull 154919775133.dkr.ecr.us-east-1.amazonaws.com/radit-api-web-server:T23D-7199-1
+4.docker images
+docker pull 154919775133.dkr.ecr.us-east-1.amazonaws.com/radit-jenkins-agent-jmeter:T23D-7408-add-jmeterPlugins-3
+
+
+5.run container n chk contents
+docker run -it 154919775133.dkr.ecr.us-east-1.amazonaws.com/radit-api-web-server:T23D-7199-2 /bin/bash
+
+
+Everytime a RUN is is used in the dockerfile, a new layer is created.
+
+docker-repo.regeneron.regn.com/busybox:<tag> -> use this if u are trying to pull the image from nexus-iq of regeneron
+
+docker pull docker-repo.regeneron.regn.com/cloudbees/cloudbees-cloud-core-oc:2.426.3.3 -> to pull locally an example way
+
+docker push docker-repo.regeneron.regn.com/salesforce/cli:2.8.11-slim - for pushing image to nexus repo
+
+docker-repo.regeneron.regn.com/cloudbees/cloudbees-cloud-core-oc:2.440.3.7
+
