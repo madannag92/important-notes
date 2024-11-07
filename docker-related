@@ -19,11 +19,11 @@ docker run -it 154919775133.dkr.ecr.us-east-1.amazonaws.com/radit-api-web-server
 
 Everytime a RUN is is used in the dockerfile, a new layer is created.
 
-docker-repo.regeneron.regn.com/busybox:<tag> -> use this if u are trying to pull the image from nexus-iq of regeneron
+docker-repo.com/busybox:<tag> -> use this if u are trying to pull the image from nexus-iq of regeneron
 
-docker pull docker-repo.regeneron.regn.com/cloudbees/cloudbees-cloud-core-oc:2.426.3.3 -> to pull locally an example way
+docker pull docker-repo.com/cloudbees/cloudbees-cloud-core-oc:2.426.3.3 -> to pull locally an example way
 
-docker push docker-repo.regeneron.regn.com/salesforce/cli:2.8.11-slim - for pushing image to nexus repo
+docker push docker-repo.com/salesforce/cli:2.8.11-slim - for pushing image to nexus repo
 
-docker-repo.regeneron.regn.com/cloudbees/cloudbees-cloud-core-oc:2.440.3.7
+docker-repo.com/cloudbees/cloudbees-cloud-core-oc:2.440.3.7
 
