@@ -1,4 +1,4 @@
-job_name = *staging* host="jenkins-cb.regeneron.regn.com-ritdev"
+job_name = *staging* host="jenkins-cb.com-ritdev"
 
 index==* <agent> or index=* pod=*vv-maven-rndp* -> index for searching jenkins agent in splunk
 
@@ -20,7 +20,7 @@ https://regeneron.splunkcloud.com/en-US/app/search/search - splunk link of regen
 
 (index=jenkins_console host=* job_name=* ) OR (index=jenkins* sourcetype="json:jenkins" build_url=* )  "*<keyword>*"
 
-(index=jenkins_console host=* job_name=* ) OR (index=jenkins* sourcetype="json:jenkins" build_url=* )  "*sonar.regenron.com*"
+(index=jenkins_console host=* job_name=* ) OR (index=jenkins* sourcetype="json:jenkins" build_url=* )  "*sonar.com*"
 
 index=*jenkins_console* keyword to search
 
@@ -36,15 +36,15 @@ index=eks cluster_name="eks-prod" namespace="radit-ci"
 
 
 Indexes for testing the jenkins jobs issue
-index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops job_name = Add-Managed-Master-Users Finished
-index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops job_name = Add-Managed-Master-Users (give username here for the link of the pipeline job to come)
-index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops source="job/onboarding-cloudbees/job/Add-Managed-Master-Users/2365/console" -> if u want the whole logs of the job use this query
+index::jenkins_console  host = jenkins-cb.com-devops job_name = Add-Managed-Master-Users Finished
+index::jenkins_console  host = jenkins-cb.com-devops job_name = Add-Managed-Master-Users (give username here for the link of the pipeline job to come)
+index::jenkins_console  host = jenkins-cb.com-devops source="job/onboarding-cloudbees/job/Add-Managed-Master-Users/2365/console" -> if u want the whole logs of the job use this query
 
-index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops job_name = cloudbees-management Finished: FAILURE
-index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops job_name = cloudbees-management source="job/ServiceNowAutomation/job/cloudbees-management/66862/console"
+index::jenkins_console  host = jenkins-cb.com-devops job_name = cloudbees-management Finished: FAILURE
+index::jenkins_console  host = jenkins-cb.com-devops job_name = cloudbees-management source="job/ServiceNowAutomation/job/cloudbees-management/66862/console"
  
-index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops job_name = cloudbees-management FINISHED:
-index::jenkins_console  host = jenkins-cb.regeneron.regn.com-devops job_name =Add-Managed-Master-Users FINISHED:
+index::jenkins_console  host = jenkins-cb.com-devops job_name = cloudbees-management FINISHED:
+index::jenkins_console  host = jenkins-cb.com-devops job_name =Add-Managed-Master-Users FINISHED:
 has context menu
 
 
