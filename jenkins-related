@@ -2,7 +2,7 @@ println(hudson.util.Secret.fromString("{XXX}").getPlainText()) ->>XXX is where u
 
  stage('SCM to build') {
         git credentialsId: 'bitbucket-access',
-                url: 'ssh://git@ritscm.regeneron.com/ritiac/ecr-automation.git',
+                url: 'ssh://git@ritscm.com/ritiac/ecr-automation.git',
                 branch: 'master'
 ---------------------------------------
 Sonarqube stage scan
@@ -13,7 +13,7 @@ Sonarqube stage scan
                   $scannerHome/bin/sonar-scanner \
                     -Dsonar.projectKey=tppm-web-frontend \
                     -Dsonar.sources=. \
-                    -Dsonar.host.url=https://sonar.regeneron.regn.com \
+                    -Dsonar.host.url=https://sonar.com \
                 """  
             }
         }
