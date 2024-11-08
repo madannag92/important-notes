@@ -3,22 +3,22 @@
    41  git add .
    42  git commit -m "updated keycloak to 7.6"
    43   git config --global user.name "nagamadan.en"
-   44  git config --global user.email nagamadan.en@regeneron.com
+   44  git config --global user.email nagamadan.en@domain.com
    45  git commit -m "updated keycloak to 7.6"
    46  git checkout -b upgradeto7.6
    47  git push
    48  git push --set-upstream origin upgradeto7.6
    49  history
-   50  git clone https://ritscm.regeneron.com/scm/op/prod-redhat-sso.git
+   50  git clone https://ritscm.com/scm/op/prod-redhat-sso.git
    51  gpg -list -keys
    52  ls
-   53  git clone https://ritscm.regeneron.com/scm/op/prod-redhat-sso.git
+   53  git clone https://ritscm.com/scm/op/prod-redhat-sso.git
    54  git config --global http.sslVerify false
-   55  git clone https://ritscm.regeneron.com/scm/op/prod-redhat-sso.git
+   55  git clone https://ritscm.com/scm/op/prod-redhat-sso.git
    56  ls
  git -c http.sslVerify=false clone <URL> - to clone the repo
 Devopslib_<branchnumber> -> u can run your devops library via using the branch number as well
-git -c http.sslVerify=false clone https://ritscm.regeneron.com/scm/devops/saml-role-automation.git --branch RADIT-NonProd - when need to pull specific branch
+git -c http.sslVerify=false clone https://ritscm.com/scm/devops/saml-role-automation.git --branch RADIT-NonProd - when need to pull specific branch
 
 Git add .
 Git commit -m "msg"
