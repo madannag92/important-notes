@@ -8,10 +8,10 @@ ls -ld commons* | grep -i text
 ls -ld commons* - cmd used to confirm if the commons file or folder present or not. So in this case I am finding commons
 cat /etc/os-release - to find the linux flavour installed.
 Use this cmd in linux  if u need to replace some words in vi editor :%s/8.9.6/8.9.10/g
-966  rpm -qa jdk
-  967  rpm -qa | grep -i jdk
-  968  rpm -qa | grep -i openjdk
-  969  rpm -qa | grep -i open
+  rpm -qa jdk
+  rpm -qa | grep -i jdk
+  rpm -qa | grep -i openjdk
+  rpm -qa | grep -i open
 export PATH=/usr/local/bin:/usr/bin:/bin path variable.
 echo "stuff" | base64 -d - on linux system
 ssh -i "ec2-creation-prod.pem" <username>@ip
@@ -61,24 +61,24 @@ Tail -100f web.log
 Removing the jdk 1.8 version
 
   java --version
- 1002  alternatives --config java
- 1003  cd /usr/java
- 1004  ls -ltra
- 1005  rpm -qa jdk*
- 1006  echo java $HOME
- 1007  echo $JAVA_HOME
- 1008  which java
- 1009  cd jdk-11.0.2/
- 1010  ll
- 1011  pwd
- 1012  export JAVA_HOME=/usr/java/jdk-11.0.2/bin -> for setting java home
- 1013  echo $JAVA_HOME
- 1014  cd ..
- 1015  pwd
- 1016  ll
- 1017  dpkg -l | grep openjdk
- 1018  rpm -qa | grep java
- 1019  rpm -qa | grep jdk
- 1020  rpm -e jdk1.8.0_144-1.8.0_144-fcs.x86_64
- 1021  rpm -qa | grep jdk
+  alternatives --config java
+  cd /usr/java
+  ls -ltra
+   rpm -qa jdk*
+   echo java $HOME
+   echo $JAVA_HOME
+   which java
+   cd jdk-11.0.2/
+   ll
+   pwd
+   export JAVA_HOME=/usr/java/jdk-11.0.2/bin -> for setting java home
+   echo $JAVA_HOME
+   cd ..
+   pwd
+   ll
+   dpkg -l | grep openjdk
+   rpm -qa | grep java
+   rpm -qa | grep jdk
+   rpm -e jdk1.8.0_144-1.8.0_144-fcs.x86_64
+   rpm -qa | grep jdk
 
