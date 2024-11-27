@@ -4,6 +4,19 @@ TFENV_TERRAFORM_VERSION=1.4.6 terraform init -input=false
  TFENV_TERRAFORM_VERSION=1.4.6 terraform plan -input=false -no-color
   TFENV_TERRAFORM_VERSION=1.4.6 terraform apply -input=false -auto-approve -no-color
 
+how to Restore terraform statefile from Backup:
+
+Terraform automatically creates a backup of the state file (terraform.tfstate.backup) before making changes. Rename this backup file to terraform.tfstate and re-run terraform plan to see if it aligns with your current infrastructure1.
+Re-import Resources:
+
+If you don't have a suitable backup, you can remove the problematic resources from the state using terraform state rm and then re-import them using terraform import. This requires knowing the exact resource configurations2.
+Remote Backend Recovery:
+
+If you're using a remote backend (like S3, Azure Blob Storage, etc.), you might be able to recover the state file from versioned backups. For example, in S3, you can enable versioning and retrieve previous versions of the state file3.
+Manual State Reconstruction:
+
+As a last resort, you can manually reconstruct the state file by creating a new one and importing all resources again. This is time-consuming and error-prone but can be necessary if no backups are available4.
+
 Below is a example stage for it
 stages { 
     stage('K8s cluster creation') {
