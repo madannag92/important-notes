@@ -32,6 +32,7 @@ docker ps -a |wc -l
 
 
 Kubectl drain <node-name> - before deleting the node
+eksctl create nodegroup --cluster my-cluster --region region-code --name my-nodegroup --node-type t3.medium --nodes 3 --nodes-min 1 --nodes-max 4
 kubectl run nginx --image nginx -n vv-perf-master - sample job run to check if the image is being pulled
 sudo chmod 777 /var/run.docker.soc - use this for setting temp root privilieges in a docker agent
 docker exec -it --user root <image name> /bin/bash - to run as root 
