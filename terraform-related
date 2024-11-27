@@ -3,7 +3,21 @@ This helps in setting the terraform version, which is below piece of code
 TFENV_TERRAFORM_VERSION=1.4.6 terraform init -input=false
  TFENV_TERRAFORM_VERSION=1.4.6 terraform plan -input=false -no-color
   TFENV_TERRAFORM_VERSION=1.4.6 terraform apply -input=false -auto-approve -no-color
+---------------------------------------------------------
+sample terraform code
+provider "aws" {
+  region = "us-west-1"
+}
 
+resource "aws_instance" "myec2" {
+  ami           = "ami-12345qwert"
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "MyEC2Instance"
+  }
+}
+---------------------------------------------------
 how to Restore terraform statefile from Backup:
 
 Terraform automatically creates a backup of the state file (terraform.tfstate.backup) before making changes. Rename this backup file to terraform.tfstate and re-run terraform plan to see if it aligns with your current infrastructure1.
@@ -16,7 +30,7 @@ If you're using a remote backend (like S3, Azure Blob Storage, etc.), you might 
 Manual State Reconstruction:
 
 As a last resort, you can manually reconstruct the state file by creating a new one and importing all resources again. This is time-consuming and error-prone but can be necessary if no backups are available4.
-
+-----------------------------------------------------------------------------------------------
 Below is a example stage for it
 stages { 
     stage('K8s cluster creation') {
