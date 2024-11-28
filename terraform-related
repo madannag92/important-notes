@@ -18,6 +18,16 @@ resource "aws_instance" "myec2" {
   }
 }
 ---------------------------------------------------
+To import existing AWS resources into Terraform management, you can use the terraform import command: 
+1. Create a resource block
+Write a resource block in your configuration to establish a name for the resource. 
+2. Specify the resource
+Specify the resource type, the name you want to use for the resource, and the resource identifier (ID or ARN) of the existing resource. 
+3. Run the command
+Run the terraform import command to attach the existing settings of the resource to the name you specified. 
+4. Verify the import
+Run terraform show to verify that the import was successful. 
+------------------------------------------------------
 how to Restore terraform statefile from Backup:
 
 Terraform automatically creates a backup of the state file (terraform.tfstate.backup) before making changes. Rename this backup file to terraform.tfstate and re-run terraform plan to see if it aligns with your current infrastructure1.
