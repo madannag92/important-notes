@@ -1,3 +1,6 @@
+Terraform state files are stored in a local file named terraform.tfstate by default
+
+------------------------------------------------------
 This helps in setting the terraform version, which is below piece of code
 
 TFENV_TERRAFORM_VERSION=1.4.6 terraform init -input=false
@@ -15,6 +18,18 @@ resource "aws_instance" "myec2" {
 
   tags = {
     Name = "MyEC2Instance"
+  }
+}
+-------------------------------------------------------------------------------
+the backend.tf is the file which is used for locking the terraform state file.
+
+terraform {
+  backend "s3" {
+    bucket         = "abhishek-s3-demo-xyz" # change this
+    key            = "abhi/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    dynamodb_table = "terraform-lock"
   }
 }
 ---------------------------------------------------
