@@ -25,6 +25,6 @@ Git commit -m "msg"
 git push origin T23D-6379 ->if this push does not work as expected, use the below command
 git push -f origin T23D-6937 
 ------------------
-https://jenkins-cb.regeneron.regn.com/devops-iac/bitbucket-scmsource-hook/notify/notify?server_url=https://ritscm.regeneron.com
+https://jenkins-cb.com/devops-iac/bitbucket-scmsource-hook/notify/notify?server_url=https://ritscm.com
 
 Devops-iac word should be replaced by controllers name for multi branch pipeline webhook
