@@ -1,6 +1,18 @@
+sample dockerfile
+------------------------------------------
+FROM python:3.8.13-slim-buster
+
+RUN mkdir -p /app
+COPY . main.py /app/
+WORKDIR /app
+RUN pip install -r requirements.txt
+RUN python -m textblob.download_corpora
+EXPOSE 8080
+CMD [ "main.py" ]
+ENTRYPOINT [ "python" ]
 
 
-
+-------------------------------------------------------------------------------------
 in aws console...when u select dat image..click on push commands...u wl get command
 1.aws ecr get-login-password --region us-east-1
 2.docker login --username AWS  154919775133.dkr.ecr.us-east-1.amazonaws.com
