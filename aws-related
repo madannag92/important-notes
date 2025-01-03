@@ -1,0 +1,12 @@
+What is the difference between a load balancer and a Cloud NAT gateway?
+
+Load Balancer:
+Distributes incoming traffic across multiple servers or services.
+Primarily used for load distribution, redundancy, and high availability.
+Works at various layers (L4 for TCP, L7 for HTTP/HTTPS).
+
+Cloud NAT Gateway:
+Provides outbound internet access for instances in a private network without
+exposing them to inbound traffic.
+Used for secure, private instances that need internet access without being directly
+accessible from the internet.
