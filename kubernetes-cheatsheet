@@ -1,3 +1,84 @@
+
+KUBECTL COMMANDS
+
+To check the version:
+kubectl version
+kubectl version --output=yaml
+To check info about the cluster
+kubectl config view
+To run a Pod
+kubectl run <pod name> --image <image name>
+kubectl run myngix --image nginx
+To create a deployment
+kubectl create deployment <name> --image <image name>
+kubectl create deployment mynginx --image nginx
+To scale the deployment (increase replicas)
+kubectl scale deployment <deployment name> --replicas <no of replicas>
+kubectl scale deployment mynginx --replicas 2
+To check all running services, pods, etc.
+kubectl get all
+To get the get details from the a particular namespace
+kubectl get all -n <namespace name>
+To get the internal components running
+kubectl get pods -A 
+kubectl get pods -A -owide
+To check all the running services
+kubectl get services
+To check all the running pods
+kubectl get pods
+// with extra details
+kubectl get pods -o wide
+To check all the running node.
+kubectl get nodes
+To check all the replicaset
+kubectl get replicaset
+To check all the namespaces
+kubectl get namespaces
+To get all the API resources
+kubectl api-resources
+To delete the deployment
+kubectl delete deployment <deployment-name>
+To delete the pods
+kubectl delete pod <pod-name>
+To delete evicted pods
+kubectl delete pod --field-selector="status.phase==Failed"
+To get logs of a pod
+kubectl logs <pod-name>
+To check logs or sh/bash of a container inside a pod. That if pods have multiple container an we have enter inside a container
+kube exec -it <pod-name> -c <container-name> -- <bash command>
+kube exec -it multi-container -c nginx-container -- curl localhost
+kube exec -it multi-container -c nginx-container -- sh
+kubectl logs multi-container -c nginx-container
+To get inside the pod
+kubectl exec -it <pod name> -- sh
+kubectl exec -it nginx -- sh
+Get a deep details/state chnages about a pod
+kube describe pod <pod -name>
+To watch the pods (watch refresh every few seconds)
+kubectl get pods -w
+To check the cluster are avilable
+kube config get-contexts
+We can create namespace by
+kubectl create namespace <name>
+kubectl create namespace dev
+To do a dry nun and get the output as Yaml
+kubectl create namespace test-name --dry-run=client -oyaml
+To edit the deployment (deployment file)
+kubectl edit deployment <deployment name>
+To delete all the pods
+kubectl delete pods --all
+Apply to a particular namespace
+kubectl apply -f <config file name> --namespace=<namespace name>
+Persistent Volume
+Get all the PersistentVolume
+kubectl get pv
+Get all the PersistentVolumeClaim (tied to a namespace)
+kubectl get pvc
+To chnage default/active namespace
+kubectl config set-context --current --namespace=<namespace name>
+To get the details of a particular namespace
+kubectl get all -n <namespace name>
+--------------------------------------------------------------------------------
 helm upgrade --install aws-corretto-nginx ./helm-deployment -n cb-artifact-server -f ./helm-deployment/values-prod.yaml --set image.tag=14 -> to upgrade the helm chart    the one in the yellow is the namespace and after -f it is the file location and also while doing the helm upgrade u should be in the samelocation of the folder
 
 helm upgrade --install nexus-repo-test deployment/nexus-repo -n sonatype-nexus-test -f deployment/values-staging.yaml --atomic --timeout 7m --set 'image.tag=3.56.0-25'
