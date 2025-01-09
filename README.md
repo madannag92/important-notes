@@ -12,4 +12,6 @@ https://github.com/bregman-arie/devops-exercises
 
 https://github.com/RishikeshOps/Scripts/tree/main
 
+https://github.com/iam-veeramalla/python-for-devops
+
 
