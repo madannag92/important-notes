@@ -1,0 +1,60 @@
+Using env.PYENV_VERSION Variable
+In this approach, we set the environment variable in Jenkins PYENV_VERSION to the required version. When the job runs, it uses the specified version of Python.
+
+Example (Declarative Pipeline)
+Jenkinsfile
+pipeline {
+    agent any
+ 
+    stages {
+        stage('Main') {
+            steps {
+                sh '''#!/bin/bash
+                    # Set up pyenv
+                    export PATH="$HOME/.pyenv/bin:$PATH"
+                    eval "$(pyenv init --path)"
+                    eval "$(pyenv init -)"
+                    eval "$(pyenv virtualenv-init -)"
+ 
+                    # List available Python versions
+                    pyenv versions
+ 
+                    # Set local Python version using PYENV_VERSION
+                    export PYENV_VERSION=3.12.0
+                    python -V
+ 
+                    # Change to another Python version
+                    export PYENV_VERSION=3.13.0
+                    python -V
+                '''
+            }
+        }
+    }
+}
+----------------------------------------------------------------
+
+Example (Scripted Pipeline)
+Jenkins
+node {
+    stage('Main') {
+        // Shell script to set up pyenv and change Python versions
+        sh '''#!/bin/bash
+            # Set up pyenv
+            export PATH="$HOME/.pyenv/bin:$PATH"
+            eval "$(pyenv init --path)"
+            eval "$(pyenv init -)"
+            eval "$(pyenv virtualenv-init -)"
+ 
+            # List available Python versions
+            pyenv versions
+ 
+            # Set local Python version to 3.12.0
+            pyenv local 3.12.0
+            python -V
+ 
+            # Change to another Python version
+            pyenv local 3.13.0
+            python -V
+        '''
+    }
+}
