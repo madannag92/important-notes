@@ -4,6 +4,8 @@ https://github.com/milanm/DevOps-Roadmap
 
 https://github.com/bregman-arie/devops-exercises
 
+https://github.com/Pradumnasaraf/DevOps/tree/main --> this is a very good repo with all the commands
+
 https://github.com/LondheShubham153/90DaysOfDevOps
 
 https://github.com/RishikeshOps/DevOps-Learning-Resources
