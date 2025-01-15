@@ -10,10 +10,14 @@ https://github.com/LondheShubham153/90DaysOfDevOps
 
 https://github.com/RishikeshOps/DevOps-Learning-Resources
 
+https://github.com/cirocosta/sample-docker-registry-aws/tree/master
+
 https://github.com/bregman-arie/devops-exercises
 
 https://github.com/RishikeshOps/Scripts/tree/main
 
 https://github.com/iam-veeramalla/python-for-devops
+
+
 
 
