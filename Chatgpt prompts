@@ -1,0 +1,33 @@
+Kindly use these prompts below in chatgpt for detailed steps of projects.
+
+Cloud Computing and DevOps 
+
+1. Write a guide for deploying a Python Flask web application on AWS using Elastic Beanstalk.
+
+2. Develop a script for automating server provisioning using Terraform for AWS infrastructure.
+
+3. Create a CI/CD pipeline using Jenkins for continuous integration and deployment of a Node.js application.
+
+4. Set up a Kubernetes cluster on AWS using EKS and deploy a containerized application.
+
+5. Create an AWS Lambda function using Python to process incoming data from an S3 bucket.
+
+6. Write a script to monitor the health of a cloud-based application on AWS using CloudWatch and send alerts.
+
+7. Develop a Docker Compose file to run a multi-container application with a Node.js backend and MongoDB.
+
+8. Set up a GitLab CI pipeline to automate the deployment of an application to Google Cloud Platform.
+
+9. Create an Ansible playbook to configure web servers on multiple EC2 instances in AWS.
+
+10. Write a Terraform script to provision an AWS S3 bucket and enable versioning and encryption.
+
+11. Develop a solution for creating auto-scaling groups in AWS to ensure your application scales based on traffic.
+
+12. Assist in configuring a Jenkins pipeline that deploys a web app to an Azure Web App service.
+
+13. Write a guide for configuring Kubernetes Helm charts to deploy a scalable microservices application.
+
+14. Create a script to automate the backup of databases in the cloud using AWS RDS and S3.
+
+15. Design an approach for managing and automating infrastructure using GitOps with tools like ArgoCD.
