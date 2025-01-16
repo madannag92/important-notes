@@ -1,6 +1,7 @@
 
 KUBECTL COMMANDS
-
+let say two pods are running and one pod is crashloop back off and other pod is running. but the overall pod status when you hit command kubectl get pods -
+-the answer is crashloopbackoff
 To check the version:
 kubectl version
 kubectl version --output=yaml
