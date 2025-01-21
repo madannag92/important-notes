@@ -13,6 +13,15 @@ exposing them to inbound traffic.
 Used for secure, private instances that need internet access without being directly
 accessible from the internet.
 ----------------------------------------
+If your using load balancing in 2 availability zones den which load balancer you should use?
+
+Both ALB and NLB support multi-AZ deployment and will distribute traffic across the two Availability Zones, providing high availability. The choice depends on the type of traffic and features we need.
+
+*For web applications and HTTP-based services, ALB is typically preferred.
+
+*For high-performance, low-latency applications, NLB would be more appropriate.
+
+----------------------------------------
 AWS Load Balancer Interview Questions🌟
 
 👨‍💻1.What are the different types of Load Balancers provided by AWS?
