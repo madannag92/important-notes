@@ -13,6 +13,7 @@ kubectl run myngix --image nginx
 To create a deployment
 kubectl create deployment <name> --image <image name>
 kubectl create deployment mynginx --image nginx
+kubectl logs -n <namespace> -f <current-pod-name> --previous this will print logs of previous pod which was terminated.
 To scale the deployment (increase replicas)
 kubectl scale deployment <deployment name> --replicas <no of replicas>
 kubectl scale deployment mynginx --replicas 2
