@@ -7,6 +7,48 @@ TFENV_TERRAFORM_VERSION=1.4.6 terraform init -input=false
  TFENV_TERRAFORM_VERSION=1.4.6 terraform plan -input=false -no-color
   TFENV_TERRAFORM_VERSION=1.4.6 terraform apply -input=false -auto-approve -no-color
 ---------------------------------------------------------
+Task 1: Create a security group
+To allow traffic to the EC2 instance, you need to create a security group. Follow these steps:
+
+In your main.tf file, add the following code to create a security group:
+
+resource "aws_security_group" "web_server" {
+  name_prefix = "web-server-sg"
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+Run terraform init to initialize the Terraform project.
+
+Run terraform apply to create the security group.
+
+Task 2: Create an EC2 instance
+Now you can create an EC2 instance with Terraform. Follow these steps:
+
+In your main.tf file, add the following code to create an EC2 instance:
+
+resource "aws_instance" "web_server" {
+  ami           = "ami-0557a15b87f6559cf"
+  instance_type = "t2.micro"
+  key_name      = "my-key-pair"
+  security_groups = [
+    aws_security_group.web_server.name
+  ]
+
+  user_data = <<-EOF
+              #!/bin/bash
+              echo "<html><body><h1>Welcome to my website!</h1></body></html>" > index.html
+              nohup python -m SimpleHTTPServer 80 &
+              EOF
+}
+Note: Replace the ami and key_name values with your own. You can find a list of available AMIs in the AWS documentation.
+
+Run terraform apply to create the EC2 instance.
+---------------------------------------------------------
 sample terraform code
 provider "aws" {
   region = "us-west-1"
