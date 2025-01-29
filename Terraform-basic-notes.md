@@ -1,3 +1,4 @@
+▶️ Section 1: Initialize 
 1. terraform init: Initializes a Terraform working directory.
 2. terraform validate: Validates the Terraform configuration files.
 3. terraform fmt: Formats the Terraform configuration files.
