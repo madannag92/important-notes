@@ -1,83 +1,116 @@
-
 KUBECTL COMMANDS
 let say two pods are running and one pod is crashloop back off and other pod is running. but the overall pod status when you hit command kubectl get pods -
 -the answer is crashloopbackoff
+-------------------
 To check the version:
 kubectl version
 kubectl version --output=yaml
+Kubectl version --client
+--------------------
 To check info about the cluster
 kubectl config view
+-------------------
 To run a Pod
 kubectl run <pod name> --image <image name>
 kubectl run myngix --image nginx
+------------------
 To create a deployment
 kubectl create deployment <name> --image <image name>
 kubectl create deployment mynginx --image nginx
+-------------------
 kubectl logs -n <namespace> -f <current-pod-name> --previous this will print logs of previous pod which was terminated.
+-------------------
 To scale the deployment (increase replicas)
 kubectl scale deployment <deployment name> --replicas <no of replicas>
 kubectl scale deployment mynginx --replicas 2
+------------------
 To check all running services, pods, etc.
 kubectl get all
+------------------
 To get the get details from the a particular namespace
 kubectl get all -n <namespace name>
+------------------
 To get the internal components running
 kubectl get pods -A 
 kubectl get pods -A -owide
+------------------
 To check all the running services
 kubectl get services
+-----------------
 To check all the running pods
 kubectl get pods
 // with extra details
 kubectl get pods -o wide
+-----------------
 To check all the running node.
 kubectl get nodes
+-----------------
 To check all the replicaset
 kubectl get replicaset
+----------------
 To check all the namespaces
 kubectl get namespaces
+---------------
 To get all the API resources
 kubectl api-resources
+---------------
 To delete the deployment
 kubectl delete deployment <deployment-name>
+---------------
 To delete the pods
 kubectl delete pod <pod-name>
+---------------
 To delete evicted pods
 kubectl delete pod --field-selector="status.phase==Failed"
+---------------
 To get logs of a pod
 kubectl logs <pod-name>
+---------------
 To check logs or sh/bash of a container inside a pod. That if pods have multiple container an we have enter inside a container
 kube exec -it <pod-name> -c <container-name> -- <bash command>
 kube exec -it multi-container -c nginx-container -- curl localhost
 kube exec -it multi-container -c nginx-container -- sh
 kubectl logs multi-container -c nginx-container
+---------------
 To get inside the pod
 kubectl exec -it <pod name> -- sh
 kubectl exec -it nginx -- sh
+---------------
 Get a deep details/state chnages about a pod
 kube describe pod <pod -name>
+---------------
 To watch the pods (watch refresh every few seconds)
 kubectl get pods -w
+---------------
 To check the cluster are avilable
 kube config get-contexts
 We can create namespace by
 kubectl create namespace <name>
 kubectl create namespace dev
 To do a dry nun and get the output as Yaml
-kubectl create namespace test-name --dry-run=client -oyaml
+kubectl create namespace test-name --dry-run=client -o yaml
+---------------
 To edit the deployment (deployment file)
 kubectl edit deployment <deployment name>
+---------------
 To delete all the pods
 kubectl delete pods --all
 Apply to a particular namespace
 kubectl apply -f <config file name> --namespace=<namespace name>
+---------------
 Persistent Volume
 Get all the PersistentVolume
 kubectl get pv
+---------------
 Get all the PersistentVolumeClaim (tied to a namespace)
 kubectl get pvc
+---------------
 To chnage default/active namespace
 kubectl config set-context --current --namespace=<namespace name>
+kubectl config current-context -> to check which current config file am I using
+kubectl config use-context <my-cluster-name> -> to be used to switch between other configs with the full name to be mentioned starting with arn and all
+kubectl config get-contexts -> to show all the contexts
+---------------
 To get the details of a particular namespace
 kubectl get all -n <namespace name>
 --------------------------------------------------------------------------------
@@ -87,7 +120,7 @@ helm upgrade --install nexus-repo-test deployment/nexus-repo -n sonatype-nexus-t
 
 while checking for the helm issues, also use the helm cmd's for getting to know the issue.
 
-If the node is not coming up in the cluster, restart the kubelet service which should fix the issue
+If the node is not coming up in the cluster, restart the kubelet service in the node i.e ec2 instance which should fix the issue
 
 C:\Users\nagamadan.en\.kube\config - is the location for kubeconfig file
 journalctl -u kubelet -f - to find out the logs of the kubelet
@@ -112,17 +145,12 @@ Cron tab -e -> edit all the existing cron cmd
 Systemctl status crond - to check the status
 cat cron | grep "Mar 20" 
 docker ps -a |wc -l 
-
-
 Kubectl drain <node-name> - before deleting the node
 eksctl create nodegroup --cluster my-cluster --region region-code --name my-nodegroup --node-type t3.medium --nodes 3 --nodes-min 1 --nodes-max 4
 kubectl run nginx --image nginx -n vv-perf-master - sample job run to check if the image is being pulled
 sudo chmod 777 /var/run.docker.soc - use this for setting temp root privilieges in a docker agent
 docker exec -it --user root <image name> /bin/bash - to run as root 
 Docker run -it <imagename> /bin/bash -> try this if u have the image to login inside the image
-kubectl config current-context -> to check which current config file am I using
-kubectl config use-context <my-cluster-name> -> to be used to switch between other configs with the full name to be mentioned starting with arn and all
-kubectl config get-contexts -> to show all the contexts
 Kubectl get pods --all-namespaces -o wide | grep ip-172.17.209.241 -> gets filtered which ever node ip pods are running
 Kubectl describe -n hla-prod-> describe the namespace
 Kubectl get storageclass - gets all the types of storageclasses
@@ -134,25 +162,24 @@ kubectl describe namespace <ns-name> -> to describe the config of namespace
 kubectl describe PodMetrics vg-0 -n radit-ci-vg
 kubectl exec -it vg-0 -n radit-ci-vg /bin/sh - to go inside the shell
 kubectl delete pod vg-0 --force -n radit-ci-vg 
-Kubectl version --client
-kubectl get secrets -n mlspot-dev
+kubectl get secrets -n mlspot-dev - shows the secret of particular namespace
 kubectl describe secret default-generated-token -n mlspot-dev ->this is the token name in the namespace
 kubectl describe sa cjoc -n radit-ci-rit-ha-1 -> gives service account details attached to the namespace
-Kubectl logs <podname> -n <namespace> -> to ge the logs of the pod
+Kubectl logs <podname> -n <namespace> -> to get the logs of the pod
 kubectl cp vv-jmeter-hjsds:/tmp/workspace/Performance/performance_test_parallel/jmeter.log ./jmeterlatest.txt -n radit-ci-vg ->this cmd helps us copy the file from lens to local system. Bold is pod name
 kubectl cp sonarqube-sonarqube-dce-app-74b587f9fb-77s4r:/opt/sonarqube/logs ./sonar.txt -n sonar-dev -> one more example
 aws ssm get-parameter --name /aws/service/eks/optimized-ami/1.25/amazon-linux-2/recommended/image_id --region us-east-1 --query "Parameter.Value" --output text ->this is the cmd to check in cli which ami is suitable for eks cluster version. Where 1.25 is cluster version which will change according the cluster version which we are upgrading to.
 aws eks update-cluster-version --region region-code --name my-cluster --kubernetes-version 1.30
-eksctl get clusters
+eksctl get clusters - shows all clusters
 helm rollback ap-operations-service 32 -n vv ->32 is the version and  ap-operations-service is the helm chart name
 docker run -it --user root --entrypoint /bin/bash 154919775133.dkr.ecr.us-east-1.amazonaws.com/radit-jenkins-agent-sonar:T23D-8238-15
 docker run -it --entrypoint /bin/bash 154919775133.dkr.ecr.us-east-1.amazonaws.com/radit-jenkins-agent-sonar:T23D-8238-15
-  639  docker run -it --user root --entrypoint /bin/bash 154919775133.dkr.ecr.us-east-1.amazonaws.com/radit-jenkins-agent-sonar:T23D-8238-15
+docker run -it --user root --entrypoint /bin/bash 154919775133.dkr.ecr.us-east-1.amazonaws.com/jenkins-agent-sonar:T23D-8238-15
 
-docker run -it --user root --entrypoint /bin/bash 154919775133.dkr.ecr.us-east-1.amazonaws.com/radit-jenkins-agent-r:T23D-85121-5
+docker run -it --user root --entrypoint /bin/bash 154919775133.dkr.ecr.us-east-1.amazonaws.com/jenkins-agent-r:T23D-85121-5 -> direct command for running the jenkins agent
 
 Making the pv and pvc from readwrite once to readwrite many
-1.first got the yml file of the pv of the claimed pvc make the changes to readwritemany from readwriteonce 
+        1.first got the yml file of the pv of the claimed pvc make the changes to readwritemany from readwriteonce 
 	2. Also change the persistentvolumeclaim from delete to retain and save the pv yml file
 	3. Stop the controller
 	4. Delete the pvc
@@ -172,10 +199,7 @@ su jenkins
     6  mkdir jre/bin
     7  mkdir -p jre/bin
     8  ln -s /usr/bin/java /jre/bin/java
-    9  ln -s /usr/bin/java jre/bin/java
-ln -s /usr/bin/java /opt/sonar-scanner/jre/bin/java
-
-From <https://teams.microsoft.com/v2/?ring=ring3_6> 
+    9  ln -s /usr/bin/java jre/bin/java ln -s /usr/bin/java /opt/sonar-scanner/jre/bin/java
 
 
    10  sonar-scanner
@@ -183,12 +207,7 @@ From <https://teams.microsoft.com/v2/?ring=ring3_6>
    12  su - jenkins
    13  history
 
-
-
-
-
-
-
+---------------------------------
 
 Sample PVC yml file
 apiVersion: v1
