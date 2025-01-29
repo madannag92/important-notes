@@ -1,6 +1,7 @@
 Kindly use these prompts below in chatgpt for detailed steps of projects.
 
 Also use this link for best projects on devops and copy paste the headings in chatgpt for detailed step by step implementation -> https://dev.to/prodevopsguytech/50-devops-project-ideas-to-build-your-skills-from-beginner-to-advanced-3e07
+
 For example: provide me step by step to Deploy a Web App to AWS Using Terraform
 -----------------------------
 Cloud Computing and DevOps 
