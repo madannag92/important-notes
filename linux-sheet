@@ -1,11 +1,12 @@
 /var/cache/yum is the location to clear the cache of rpm files in RHEL and 
 /proc/sys/vm/drop_caches file to clear cache in ubuntu files.
-
+--------------------------
 Yum install -y bind-utils for accessing nslookup package in redhat instance 
 Whenever there is a sh cmd to be run, use the cmd "sh <cmd>" and then enter to run the sh cmd
-
+----------------------
 ls -ld commons* | grep -i text 
 ls -ld commons* - cmd used to confirm if the commons file or folder present or not. So in this case I am finding commons
+---------------
 cat /etc/os-release - to find the linux flavour installed.
 Use this cmd in linux  if u need to replace some words in vi editor :%s/8.9.6/8.9.10/g
   rpm -qa jdk
@@ -26,8 +27,6 @@ Both the above cmd helps us in seeing the list of users
 Ls -lrt -> it will show the modified files at the bottom when used in the folder
 ssh-keygen -m PEM -f key.pem -> to create private key
 apk add --update --no-cache gettext
-
-
 Find  -/name ssl - find cmd
 Systemctl status sshd -> to find out the users who are 
 logged in
@@ -43,13 +42,9 @@ keytool -list -v -keystore cacerts
 keytool -list -v -keystore cacerts -alias RegeneronRoot
   keytool -list -v -keystore cacerts -alias RegeneronTarRoot
 keytool -import -alias your-alias -keystore cacerts -file certificate.der - use this cmd 
-
 update-alternatives cmd to change the java version
 scp -r * s.nagamadan.en@10.244.40.27:/tmp/prod-plugins
-
-
 where ever corretto was installed lib/security/cacerts
-
 /usr/lib/java-corretto/lib/security/cacerts
 
 this is the standard location for the trust store
