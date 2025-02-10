@@ -1,5 +1,7 @@
 Referrals website
-www.topmate.io, jumbl,www.bolt.new
+www.topmate.io, jumbl
+
+good website like chatgpt ->www.bolt.new, www.thegigabrain.com
 
 This is related to most of the devops tools and concepts. Below is the link of Road map of Devops
 
