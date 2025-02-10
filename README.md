@@ -1,9 +1,5 @@
 Referrals website
-www.topmate.io
-
-jumbl
-
-www.bolt.new
+www.topmate.io, jumbl,www.bolt.new
 
 This is related to most of the devops tools and concepts. Below is the link of Road map of Devops
 
