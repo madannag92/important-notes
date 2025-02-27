@@ -17,6 +17,8 @@ https://github.com/Pradumnasaraf/DevOps/tree/main --> this is a very good repo w
 
 https://github.com/LondheShubham153/90DaysOfDevOps
 
+https://github.com/rohitg00/devops-interview-questions -> good questions are there for interview preparation
+
 https://github.com/RishikeshOps/DevOps-Learning-Resources
 
 https://github.com/Vikkanav/python-for-devops-practices
