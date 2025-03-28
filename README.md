@@ -3,6 +3,8 @@ www.topmate.io, jumbl
 
 good website like chatgpt ->www.bolt.new, www.thegigabrain.com
 
+https://eksctl.io/getting-started/ -> eks related documentation
+
 Resume building websites -> www.resumegenius.com, www.kaagaz.app, 
 
 Interview prep websites -> www.finalroundai.com
