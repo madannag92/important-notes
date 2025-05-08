@@ -13,6 +13,8 @@ This is related to most of the devops tools and concepts. Below is the link of R
 
 https://github.com/milanm/DevOps-Roadmap
 
+https://github.com/gashok13193/DevOps-Docs/
+
 https://github.com/bregman-arie/devops-exercises
 
 https://github.com/Pradumnasaraf/DevOps/tree/main --> this is a very good repo with all the commands
