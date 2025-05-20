@@ -5,7 +5,7 @@ good website like chatgpt ->www.bolt.new, www.thegigabrain.com
 
 https://eksctl.io/getting-started/ -> eks related documentation
 
-Resume building websites -> www.resumegenius.com, www.kaagaz.app, 
+Resume building websites -> www.resumegenius.com, www.kaagaz.app, https://resume.io/
 
 Interview prep websites -> www.finalroundai.com
 
