@@ -9,6 +9,12 @@ Resume building websites -> www.resumegenius.com, www.kaagaz.app, https://resume
 
 Interview prep websites -> www.finalroundai.com
 
+Devops Complete Content . Below are the drive links
+
+https://drive.google.com/drive/mobile/folders/1c-RKG-deLVll_DNXtg-yuNZWebHpxAzX?usp=sharing&sort=13&direction=a
+
+https://drive.google.com/drive/folders/1EEl6he-IOba5AerYrKjTZkHnEPrb7mTA
+
 This is related to most of the devops tools and concepts. Below is the link of Road map of Devops
 
 https://github.com/milanm/DevOps-Roadmap
