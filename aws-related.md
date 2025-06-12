@@ -21,6 +21,34 @@ Both ALB and NLB support multi-AZ deployment and will distribute traffic across 
 
 *For high-performance, low-latency applications, NLB would be more appropriate.
 
+---------------------------------------
+what is difference between inline and managed policies in AWS IAM?
+
+Inline Policies
+Tightly coupled with a single IAM identity (user, group, or role).
+Embedded directly into the identity.
+Not reusable: You can't attach the same inline policy to multiple identities.
+Use case: When you want a one-to-one relationship between the policy and the identity, often for fine-grained control or temporary permissions.
+Example: A policy that gives a specific user access to a unique S3 bucket.
+
+🔹 Managed Policies
+There are two types:
+
+AWS Managed Policies: Created and maintained by AWS.
+Customer Managed Policies: Created and managed by you.
+Reusable: Can be attached to multiple users, groups, or roles.
+Easier to manage: Centralized updates apply to all attached identities.
+Version control: You can update and track changes to customer managed policies.
+Use case: When you want to apply consistent permissions across multiple identities.
+
+Summary Table
+Feature	Inline Policy	Managed Policy
+Attachment	One identity only	Multiple identities
+Reusability	❌ No	✅ Yes
+Management	Embedded in identity	Separate, centralized
+Versioning	❌ No	✅ Yes (for customer managed)
+Best for	Specific, tightly scoped needs	Broad, reusable permissions
+
 ----------------------------------------
 AWS Load Balancer Interview Questions🌟
 
