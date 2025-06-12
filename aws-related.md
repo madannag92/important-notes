@@ -42,12 +42,12 @@ Version control: You can update and track changes to customer managed policies.
 Use case: When you want to apply consistent permissions across multiple identities.
 
 Summary Table
-Feature	Inline Policy	Managed Policy
-Attachment	One identity only	Multiple identities
-Reusability	❌ No	✅ Yes
-Management	Embedded in identity	Separate, centralized
-Versioning	❌ No	✅ Yes (for customer managed)
-Best for	Specific, tightly scoped needs	Broad, reusable permissions
+Feature	    Inline Policy	                Managed Policy
+Attachment	One identity                  only	Multiple identities
+Reusability	 ❌ No	                      ✅ Yes
+Management	 Embedded in identity	        Separate, centralized
+Versioning	 ❌ No	                        ✅ Yes (for customer managed)
+Best for	  Specific, tightly scoped needs	Broad, reusable permissions
 
 ----------------------------------------
 AWS Load Balancer Interview Questions🌟
