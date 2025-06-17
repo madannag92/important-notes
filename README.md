@@ -19,6 +19,8 @@ This is related to most of the devops tools and concepts. Below is the link of R
 
 https://github.com/milanm/DevOps-Roadmap
 
+https://github.com/stacksimplify -> must go through this repo
+
 https://github.com/gashok13193/DevOps-Docs/
 
 https://github.com/bregman-arie/devops-exercises
