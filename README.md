@@ -11,6 +11,8 @@ Interview prep websites -> www.finalroundai.com
 
 https://easyjobai.com/ -> job portal
 
+https://www.cloudsketcher.com/index.html -> very good website for cloudformation and terraform templates
+
 https://github.com/litu54/Interview-Questions-2025 -> interview questions repo
 
 Devops Complete Content . Below are the drive links
