@@ -17,6 +17,8 @@ https://drive.google.com/drive/mobile/folders/1c-RKG-deLVll_DNXtg-yuNZWebHpxAzX?
 
 https://drive.google.com/drive/folders/1EEl6he-IOba5AerYrKjTZkHnEPrb7mTA
 
+https://usefulai.com/tools -> usefull tool related to AI.
+
 This is related to most of the devops tools and concepts. Below is the link of Road map of Devops
 
 https://github.com/milanm/DevOps-Roadmap
