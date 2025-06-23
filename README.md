@@ -23,6 +23,8 @@ https://github.com/ozbillwang/terraform-best-practices -> terraform related samp
 
 https://github.com/stacksimplify -> must go through this repo
 
+https://github.com/googlecloudplatform/terraformer -> terraformer tool for terraform automation and standard modules
+
 https://github.com/gashok13193/DevOps-Docs/
 
 https://github.com/bregman-arie/devops-exercises
