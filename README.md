@@ -9,6 +9,8 @@ Resume building websites -> www.resumegenius.com, www.kaagaz.app, https://resume
 
 Interview prep websites -> www.finalroundai.com
 
+generatech.ai -> best website for all in one AI dashboard
+
 https://easyjobai.com/ -> job portal
 
 https://www.cloudsketcher.com/index.html -> very good website for cloudformation and terraform templates
