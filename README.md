@@ -9,6 +9,8 @@ Resume building websites -> www.resumegenius.com, www.kaagaz.app, https://resume
 
 Interview prep websites -> www.finalroundai.com
 
+https://easyjobai.com/ -> job portal
+
 https://github.com/litu54/Interview-Questions-2025 -> interview questions repo
 
 Devops Complete Content . Below are the drive links
