@@ -1,7 +1,7 @@
 Referrals website
 www.topmate.io, jumbl
 
-good website like chatgpt ->www.bolt.new, www.thegigabrain.com
+good website like chatgpt ->www.bolt.new, www.thegigabrain.com,https://bit.dev/
 
 https://eksctl.io/getting-started/ -> eks related documentation
 
@@ -20,6 +20,8 @@ Devops Complete Content . Below are the drive links
 https://drive.google.com/drive/mobile/folders/1c-RKG-deLVll_DNXtg-yuNZWebHpxAzX?usp=sharing&sort=13&direction=a
 
 https://drive.google.com/drive/folders/1EEl6he-IOba5AerYrKjTZkHnEPrb7mTA
+
+https://www.freecodecamp.org/ -> good website for research and knowledge related
 
 https://usefulai.com/tools -> usefull tool related to AI.
 
