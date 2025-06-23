@@ -47,13 +47,10 @@ https://github.com/rohitg00/devops-interview-questions -> good questions are the
 
 https://github.com/RishikeshOps/DevOps-Learning-Resources
 
-https://github.com/Vikkanav/python-for-devops-practices
-
 https://github.com/cirocosta/sample-docker-registry-aws/tree/master
 
 https://github.com/RishikeshOps/Scripts/tree/main
 
-https://github.com/iam-veeramalla/python-for-devops
 
 
 
