@@ -173,6 +173,11 @@ terraform state "rm module.aws_s3_bucket_versioning.versioning[\"raje-s3"\]"-> t
 
 sh "terraform apply -var='aws_account=154919775' -auto-approve"
 ---------------------------------------------
-Whenever you create new ecr repos make sure to come outside the repo and select the newly created repo and go to permissions and check if the policies are added.  If not wait for the automation job to run i.e ecr-repos-non-prod  or ecr-repos-prod automation job
-If the file is locked terraform use the command-> terraform force-unlock -force<lock-info-id> (a94a511e-3b00-4f43-1fed-e63157b1a1f5)-> the one is the bracket is id which needs to be inserted which changes dynamically which could be seen in the previous run. You should use the terraform force unlock command after the initialization command in the jenkins pipeline
+If the file is locked terraform use the command-> terraform force-unlock -force<lock-info-id> (a94a511e-3b00-4f43-1fed-e63157b1a1f5)-> the one is the bracket is id which needs to be inserted which changes dynamically which could be seen in the previous run. 
+You should use the terraform force unlock command after the initialization command in the jenkins pipeline
+example of the command is below:
+sh 'terraform init'
+sh 'terraform force-unlock -force<lock-info-id>'
+sh 'terraform refresh'
+sh 'terraform plan -out plan'
 
