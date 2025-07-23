@@ -14,8 +14,13 @@ generatech.ai -> best website for all in one AI dashboard
 https://easyjobai.com/ -> job portal
 
 https://www.cloudsketcher.com/index.html -> very good website for cloudformation and terraform templates
-
-https://github.com/litu54/Interview-Questions-2025 -> interview questions repo
+--------------------------------------------------------
+interview questions repo
+https://github.com/litu54/Interview-Questions-2025 
+https://docs.google.com/spreadsheets/d/1GJ0TAiCxU5OGVuEaS36VGZ22JslRJ5wnDYLzBLX6Xrs/edit?usp=sharing
+https://github.com/rohitg00/devops-interview-questions
+https://github.com/vijay2181/devops-baby-to-boss/tree/main/kubernetes/interview-scenarios 
+-------------------------------------------------------
 
 Devops Complete Content . Below are the drive links
 
@@ -44,8 +49,6 @@ https://github.com/bregman-arie/devops-exercises
 https://github.com/Pradumnasaraf/DevOps/tree/main --> this is a very good repo with all the commands
 
 https://github.com/LondheShubham153/90DaysOfDevOps
-
-https://github.com/rohitg00/devops-interview-questions -> good questions are there for interview preparation
 
 https://github.com/RishikeshOps/DevOps-Learning-Resources
 
