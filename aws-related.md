@@ -41,13 +41,13 @@ Easier to manage: Centralized updates apply to all attached identities.
 Version control: You can update and track changes to customer managed policies.
 Use case: When you want to apply consistent permissions across multiple identities.
 
-Summary Table
-Feature	    Inline Policy	                Managed Policy
-Attachment	One identity                  only	Multiple identities
-Reusability	 ❌ No	                      ✅ Yes
-Management	 Embedded in identity	        Separate, centralized
-Versioning	 ❌ No	                        ✅ Yes (for customer managed)
-Best for	  Specific, tightly scoped needs	Broad, reusable permissions
+| Feature      | Inline Policy                      | Managed Policy                      |
+|--------------|------------------------------------|-------------------------------------|
+| Attachment   | One identity only                  | Multiple identities                 |
+| Reusability  | ❌ No                              | ✅ Yes                              |
+| Management   | Embedded in identity               | Separate, centralized               |
+| Versioning   | ❌ No                              | ✅ Yes (for customer managed)        |
+| Best for     | Specific, tightly scoped needs     | Broad, reusable permissions         |
 
 ----------------------------------------
 AWS Load Balancer Interview Questions🌟
@@ -133,6 +133,23 @@ While API Gateway offers these benefits, remember that it adds operational compl
 💵 𝗖𝗼𝘀𝘁 𝗘𝗳𝗳𝗶𝗰𝗶𝗲𝗻𝗰𝘆: Avoid API Gateway for internal traffic to save costs.
 🔒 𝗘𝗻𝗵𝗮𝗻𝗰𝗲𝗱 𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆: Use API Gateway to secure and manage external-facing APIs.
 ⚡ 𝗟𝗼𝘄𝗲𝗿 𝗟𝗮𝘁𝗲𝗻𝗰𝘆: Leverage ALB for faster communication between internal microservices.
+
+| Feature                | ALB (Application Load Balancer)                  | NLB (Network Load Balancer)                      |
+|------------------------|--------------------------------------------------|--------------------------------------------------|
+| OSI Layer              | Layer 7 (Application)                            | Layer 4 (Transport)                              |
+| Protocols Supported    | HTTP, HTTPS, gRPC                                | TCP, UDP, TLS                                    |
+| Routing Capabilities   | Host, path, and header-based routing             | IP/port-based, no advanced routing               |
+| Target Types           | EC2, IP, Lambda                                  | EC2, IP, ALB                                     |
+| Static IP              | No (can use with NLB in front for static IP)     | Yes                                              |
+| Latency                | Low (sufficient for most apps)                   | Extremely low, designed for high-throughput apps  |
+| TLS Termination        | Yes                                              | Yes                                              |
+| WebSocket/gRPC         | Yes                                              | No (TCP only, unless proxies used)               |
+| Client IP Preservation | Via X-Forwarded-For header                       | Yes (preserves source IP)                        |
+| WAF Integration        | Yes                                              | No                                               |
+| Authentication         | Yes (OIDC/SAML)                                  | No                                               |
+| Use Cases              | Microservices, API gateways, complex HTTP apps   | Real-time, high-throughput, TCP/UDP workloads    |
+| Pricing                | Higher (more features)                           | Generally lower, but depends on connections      |
+
 
 -------------------------------------------------------------------------------------------
 
