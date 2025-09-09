@@ -1,0 +1,213 @@
+Terraform Questions and Answers:
+====================================
+
+1) What is statefile and what is the use of it ?
+2) where you are keeping the statefile ?
+3) how to declare a varible ?
+
+variable "app_id" {
+  type = string
+  description = "The id of application"
+  default = "some_value"
+}
+4) what is the difference between provisioner and provider?
+5) how pass a value from one resource block to another ?
+6) how to reuse a module?
+7) what is the differnece between Terrform init and terraform apply?
+8) how to validate the the terraform file ?
+9) what terraform plan does?
+10) how to create 10 ec2 instance using the same script ? ( count= 10) 
+11) By mistake if you downgrade the instance from t2.large to t2.micro ,then what will happen when you run the terraform script?
+
+https://medium.com/geekculture/how-to-deploy-a-three-tier-architecture-in-aws-using-terraform-e5dfd7b6d38f
+https://www.techgeeknext.com/terraform-interview-questions
+https://jayendrapatil.com/terraform-cheat-sheet/
+https://stackoverflow.com/questions/67973518/terraform-simple-script-says-error-error-launching-source-instance-vpcidnotsp
+https://praveenkumarsreeram.com/2022/01/31/terraform-interview-questions/
+https://k21academy.com/terraform-iac/terraform-interview-questions/
+https://www.simplilearn.com/terraform-interview-questions-and-answers-article
+https://hopetutors.com/blog/interview-questions/top-100-terraform-interview-questions-with-answers/
+
+
+https://www.javatpoint.com/terraform-interview-questions
+create a file named terraform.tfvars and input the details below.-> this is used for environment variable.
+
+AWS_ACCESS_KEY="key_name"
+AWS_SECRET_KEY="secret"
+AWS_REGION="us-east-1"
+
+ami-082ccf4cbcda7b2b4
+
+terraform init
+terraform validate- validates the syntax
+terraform apply- applies the files
+terraform apply --auto-approve - without any prompt of asking yes
+terraform show - shows the resources description which was created
+terraform destory -n 
+taint resource.id This command modifies all state marketing files which it tainted.
+terraform state list ->list of service created after the terraform init is applied.
+terraform destroy -target <resource.name> - when we get the list of resources from the cmd terraform state list, need to copy and pase the resource name in destroy command
+or u can use the cmd terraform destroy --target=<resourcename>
+terraform workspace new dev - command for terraform workspace creation i.e dev is environment.
+terraform workspace list -lists workspaces
+terraform workspace show - lists active workspaces
+terraform workspace select test  -switch workspaces
+if you need more than one machine, we need to mention count =2 i.e for 2 machines
+
+https://www.javatpoint.com/terraform-interview-questions
+https://github.com/wardviaene/terraform-course
+https://github.com/zealvora/terraform-beginner-to-advanced-resource/blob/master/Section%204%20-%20Terraform%20Modules%20%26%20Workspaces/kplabs-workspace.md
+https://www.decodingdevops.com/terraform-import-module-with-examples/
+https://spacelift.io/blog/importing-exisiting-infrastructure-into-terraform
+https://www.milesweb.in/hosting-faqs/how-to-write-reusable-terraform-modules-aws/
+https://hopetutors.com/blog/interview-questions/top-100-terraform-interview-questions-with-answers/
+
+
+when you are getting an error Error: no EC2 IMDS role found, operation error ec2imds: GetMetadata, http response error StatusCode: 404, request to EC2 IMDS failed ->make sure the instance is having the IAM permission for it or create a role.tf
+1) What is statefile and what is the use of it ?
+Terraform stores information about your infrastructure in a state file. This state file keeps track of resources created by your configuration and maps them to real-world resources.
+foo/bar/terraform.tfstate. This file contains a custom JSON format that records a mapping from the Terraform resources in your configuration files to the representation ..
+
+Can you tell me how to secure the terraform?
+ 
+We should use Terraform backend which supports the encryption. We should use the environment variables, secretly store the securely pass into our Terraform coding.
+
+ 
+
+2) where you are keeping the statefile ?
+This state is stored by default in a local file named "terraform. tfstate", but it can also be stored remotely, which works better in a team environment. Terraform uses this local state to create plans and make changes to your infrastructure.
+https://mohitgoyal.co/2020/09/30/upload-terraform-state-files-to-remote-backend-amazon-s3-and-azure-storage-account/
+
+Explain State File Locking?
+State file locking is Terraform mechanism in which operations on a specific state file are blocked to avoid conflicts between multiple users performing the same process. When one user releases the lock, then only the other one can operate on that state. This helps in preventing state file corruption. This is a backend operation.
+
+How to lock Terraform module versions?
+A proven way of locking Terraform module version is using the Terraform module registry as a source. We can use the ‘version’ attribute in module of the Terraform configuration file. As the Github repository is being used as a source, we need to specify versions, branch, and query string with ‘?ref’.
+
+What is a Tainted Resource?
+
+Answer: Tainted resources are those resources that are forced to be destroyed and recreated on the next apply command. When you mark a resource as tainted, nothing changes on infrastructure but the state file is updated with this information(destroy and create). After marking a resource as tainted, terraform plan out will show that the resource will get destroyed and recreated, and when the next apply happens the changes will get implemented.
+
+How will you upgrade plugins on Terraform?
+Run ‘terraform init’ with ‘-upgrade’ option. This command rechecks the releases.hashicorp.com to find new acceptable provider versions. It also downloads available provider versions. “.terraform/plugins/<OS>_<ARCH>” is the automatic downloads directory.
+
+What is State in Terraform? What is the significance?
+It is important and mandatory to maintain State in Terraform
+It is stored in JSON files
+The filename is terraform.tsstate
+The state file contains all the information about the infrastructure that Terraform has created. For ex: If terraform has created 10 resources in Azure, then all the information about those 10 services will be stored in the State file.
+You can store the State either in Local File or Remote File
+
+What is a "tainted resource"?
+
+It's a resource which was successfully created but failed during provisioning. Terraform will fail and mark this resource as "tainted".
+
+
+3) how to declare a varible ?
+Input variables are usually defined by stating a name, type and a default value. However, the type and default values are not strictly necessary. Terraform can deduct the type of the variable from the default or input value.
+https://upcloud.com/community/tutorials/terraform-variables/
+
+A Terraform module is a set of Terraform configuration files contained within a single directory. Or a basic configuration with a single directory having one or more .tf file is a module. When Terraform commands are run directly from such a directory, it is referred to as the root module.
+
+4) what is the difference between provisioner and provider?
+ https://jhooq.com/terraform-provisioner/
+ 
+cat provisioner.tf
+provider "aws" {
+   region     = "us-east-1"
+   access_key = "access_key"
+   secret_key = "secret_key"
+
+}
+
+resource "aws_instance" "ec2_example" {
+
+    ami = "ami-0b0af3577fe5e3532"
+    instance_type = "t2.micro"
+    tags = {
+        Name = "Terraform EC2"
+    }
+
+  provisioner "local-exec" {
+    command = "touch hello-jhooq.txt"
+  }
+}
+
+Provider is nothing but cloud for example if provider is aws than we have access key and secret key with region.
+
+Sensitive Variable is Secure Place for API Credentials : Terraform Cloud can securely store and encrypt your passwords. This encrypted storage can be used to store passwords, TLS certificates, SSH keys, and anything else that shouldn't be stored in plain text.
+
+
+5) how pass a value from one resource block to another ?
+ 
+By using map we can pass value from one resource block to another
+
+variable "key" {
+  type = "string"
+}
+
+variable "images" {
+  type = "map"
+
+  default = {
+    us-east-1 = "image-1234"
+    us-west-2 = "image-4567"
+  }
+}
+
+variable "zones" {
+  type = "list"
+  default = ["us-east-1a", "us-east-1b"]
+}
+A map value is a lookup table from string keys to string values. This is useful for selecting a value based on some other provided value.
+
+6) how to reuse a module?
+https://www.milesweb.in/hosting-faqs/how-to-write-reusable-terraform-modules-aws/
+
+https://jarombek.com/blog/jun-17-2019-terraform-module
+https://blog.gruntwork.io/how-to-create-reusable-infrastructure-with-terraform-modules-25526d65f73d
+
+7) what is the differnece between Terrform init and terraform apply?
+
+The terraform init command will initialize the working directory containing Terraform configuration files and install any required plugins.
+Note: The terraform init command is safe to run multiple times, to bring the working directory up to date with changes in the configuration.
+The terraform plan command provides a preview of the actions that Terraform will take in order to configure resources per the configuration file. In this case, a single Smart Folder resource will be added.
+Terraform Apply can be used to perform the many tasks offered by Terraform Providers. For example:
+
+Provision infrastructure.
+Execute scripts on local and remote hosts.
+Copy files from one server to another.
+Query AWS for resource information.
+Push files to Git.
+Read data from APIs as JSON. 
+Read image metadata from a Docker registry.
+Create a certificates for a development environment.
+Create DNS records.
+Inject containers with sensitive information such as passwords.
+
+8) how to validate the the terraform file ?
+The terraform validate command is used to validate the syntax of the terraform files. Terraform performs a syntax check on all the terraform files in the directory, and will display an error if any of the files doesn't validate.
+
+This command does not check formatting (e.g. tabs vs spaces, newlines, comments etc.).
+
+The following can be reported:
+
+invalid HCL syntax (e.g. missing trailing quote or equal sign)
+invalid HCL references (e.g. variable name or attribute which doesn't exist)
+same provider declared multiple times
+same module declared multiple times
+same resource declared multiple times
+invalid module name
+
+-->cat instance.tf
+provider "aws" {
+  access_key = "access_key"
+  secret_key = "secret_key"
+  region     = "us-east-1"
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-0d729a60"
+  instance_type = "t2.micro"
+}
+
