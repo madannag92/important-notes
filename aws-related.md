@@ -146,12 +146,13 @@ Multiple security groups can be attached to one instance, but only one NACL per 
 
 Security groups provide flexible, stateful and granular instance-level control, while NACLs offer stateless, ordered, subnet-level filtering with allow and deny logic.
 
-Feature             Security Group                         
+| Feature                  | Security Group                                              | Network ACL                                      |
+|--------------------------|------------------------------------------------------------|--------------------------------------------------|
+| Level of operation       | Instance (ENI)                                             | Subnet                                           |
+| Type of rules            | Only allow                                                 | Allow and deny                                   |
+| Statefulness             | Stateful (return traffic auto allowed)                     | Stateless (return traffic must be explicitly allowed) |
+| Rule evaluation          | All rules evaluated                                        | Rules processed in order (lowest to highest rule number) |
+| Default behavior         | All inbound denied, outbound allowed                       | All inbound/outbound allowed by default (customizable)  |
+| Association              | Associated to ENI/instance                                 | Associated to subnet                             |
 
-Level of operation   Instance (ENI)
-Type of rules        Only allow
-Statefulness         Stateful (return traffic auto allowed)
-Rule evaluation      All rules evaluated
-Default behavior     All inbound denied, outbound allowed
-Association          Associated to ENI/instance
 
