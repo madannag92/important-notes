@@ -35,6 +35,9 @@ docker push docker-repo.com/salesforce/cli:2.8.11-slim - for pushing image to ne
 docker-repo.com/cloudbees/cloudbees-cloud-core-oc:2.440.3.7
 -------------------------------------------------------------
 
+In a Dockerfile, the ENTRYPOINT instruction defines the primary executable that will always run when a container is started from the image. 
+It sets the fixed command or script that forms the core behavior of the container.
+-------------------------------------------------------------
 sidebar_position	title	description	tags	keywords	slug
 3
 Docker Commands
