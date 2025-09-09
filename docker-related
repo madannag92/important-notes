@@ -74,6 +74,8 @@ Check all the container running.
 docker ps
 or
 docker container ls
+
+docker run --name myjenkins -v srini:/var/jenkins_home -p 8080:8080 -p 50000:50000 jenkinsci/jenkins ->running the container and attaching a volume to it
 To start and interactive session and attach terminal with the container.
 
 NOTE: every image does not support bash so we should use sh
