@@ -134,3 +134,24 @@ While API Gateway offers these benefits, remember that it adds operational compl
 🔒 𝗘𝗻𝗵𝗮𝗻𝗰𝗲𝗱 𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆: Use API Gateway to secure and manage external-facing APIs.
 ⚡ 𝗟𝗼𝘄𝗲𝗿 𝗟𝗮𝘁𝗲𝗻𝗰𝘆: Leverage ALB for faster communication between internal microservices.
 
+
+
+Security groups act as virtual firewalls at the instance level and are stateful: if inbound is allowed, return traffic is automatically allowed.
+
+NACLs act at the subnet level and are stateless: both inbound and outbound rules must be set explicitly, and processing follows rule numbers in order (first match wins).
+
+Security groups only support "allow" rules; NACLs support both "allow" and "deny".
+
+Multiple security groups can be attached to one instance, but only one NACL per subnet.
+
+Security groups provide flexible, stateful and granular instance-level control, while NACLs offer stateless, ordered, subnet-level filtering with allow and deny logic.
+
+Feature             Security Group                         
+
+Level of operation   Instance (ENI)
+Type of rules        Only allow
+Statefulness         Stateful (return traffic auto allowed)
+Rule evaluation      All rules evaluated
+Default behavior     All inbound denied, outbound allowed
+Association          Associated to ENI/instance
+
