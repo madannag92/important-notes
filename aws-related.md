@@ -134,7 +134,7 @@ While API Gateway offers these benefits, remember that it adds operational compl
 🔒 𝗘𝗻𝗵𝗮𝗻𝗰𝗲𝗱 𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆: Use API Gateway to secure and manage external-facing APIs.
 ⚡ 𝗟𝗼𝘄𝗲𝗿 𝗟𝗮𝘁𝗲𝗻𝗰𝘆: Leverage ALB for faster communication between internal microservices.
 
-
+-------------------------------------------------------------------------------------------
 
 Security groups act as virtual firewalls at the instance level and are stateful: if inbound is allowed, return traffic is automatically allowed.
 
