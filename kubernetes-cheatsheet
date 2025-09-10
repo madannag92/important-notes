@@ -109,6 +109,10 @@ kubectl get pv
 Get all the PersistentVolumeClaim (tied to a namespace)
 kubectl get pvc
 ---------------
+kubectl get pods --all-namespaces --output=wide ->kubectl command to get iPs of all pods
+kubectl get pod <pod-name> -o=jsonpath='{.status.podIP}' -> kubectl command to get IP of a specific pod.
+
+---------------
 To chnage default/active namespace
 kubectl config set-context --current --namespace=<namespace name>
 kubectl config current-context -> to check which current config file am I using
