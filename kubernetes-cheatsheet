@@ -1,7 +1,22 @@
 https://github.com/abhijitgupta123/kubernetes -> related to k8s
 
 https://devtron.ai/blog/kubernetes-management-made-easier-with-tools/ -> tools management
+--------------------------------------
+sample yml file
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aws-cli-pod
+  namespace: update-me
+spec:
+        serviceAccountName: default
+  containers:
+    - name: aws-cli
+      image: amazon/aws-cli:latest
+      command: ["sleep", "3600000"]
+  restartPolicy: Never
 
+--------------------------------------
 KUBECTL COMMANDS
 let say two pods are running and one pod is crashloop back off and other pod is running. but the overall pod status when you hit command kubectl get pods -
 -the answer is crashloopbackoff
