@@ -15,6 +15,8 @@ https://easyjobai.com/ -> job portal
 
 https://www.cloudsketcher.com/index.html -> very good website for cloudformation and terraform templates
 
+https://github.com/mzazon/awesome-cloud-projects  -> when you need to learn on cloud projects
+
 interview questions repo below
 
 https://github.com/litu54/Interview-Questions-2025 
