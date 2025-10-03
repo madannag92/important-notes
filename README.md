@@ -52,6 +52,8 @@ https://github.com/gashok13193/DevOps-Docs/
 
 https://github.com/bregman-arie/devops-exercises
 
+https://github.com/upgundecha/howtheysre
+
 https://github.com/Pradumnasaraf/DevOps/tree/main --> this is a very good repo with all the commands
 
 https://github.com/LondheShubham153/90DaysOfDevOps
