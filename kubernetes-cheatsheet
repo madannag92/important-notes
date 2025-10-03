@@ -195,8 +195,8 @@ aws ssm get-parameter --name /aws/service/eks/optimized-ami/1.25/amazon-linux-2/
 aws eks update-cluster-version --region region-code --name my-cluster --kubernetes-version 1.30
 eksctl get clusters - shows all clusters
 helm rollback ap-operations-service 32 -n vv ->32 is the version and  ap-operations-service is the helm chart name
-docker run -it --user root --entrypoint /bin/bash 154919775133.dkr.ecr.us-east-1.amazonaws.com/radit-jenkins-agent-sonar:T23D-8238-15
-docker run -it --entrypoint /bin/bash 154919775133.dkr.ecr.us-east-1.amazonaws.com/radit-jenkins-agent-sonar:T23D-8238-15
+docker run -it --user root --entrypoint /bin/bash 154919775133.dkr.ecr.us-east-1.amazonaws.com/jenkins-agent-sonar:T23D-8238-15
+docker run -it --entrypoint /bin/bash 154919775133.dkr.ecr.us-east-1.amazonaws.com/jenkins-agent-sonar:T23D-8238-15
 docker run -it --user root --entrypoint /bin/bash 154919775133.dkr.ecr.us-east-1.amazonaws.com/jenkins-agent-sonar:T23D-8238-15
 
 docker run -it --user root --entrypoint /bin/bash 154919775133.dkr.ecr.us-east-1.amazonaws.com/jenkins-agent-r:T23D-85121-5 -> direct command for running the jenkins agent
