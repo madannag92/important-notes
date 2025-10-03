@@ -42,6 +42,8 @@ This is related to most of the devops tools and concepts. Below is the link of R
 
 https://github.com/milanm/DevOps-Roadmap
 
+https://pranjalidevops.substack.com/p/daily-interview-question
+
 https://github.com/ozbillwang/terraform-best-practices -> terraform related sample repo
 
 https://github.com/stacksimplify -> must go through this repo
