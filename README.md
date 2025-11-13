@@ -17,6 +17,8 @@ https://www.cloudsketcher.com/index.html -> very good website for cloudformation
 
 https://github.com/mzazon/awesome-cloud-projects  -> when you need to learn on cloud projects
 
+https://github.com/enescingoz/awesome-n8n-templates - Best n8n templates to use
+
 interview questions repo below
 
 https://github.com/litu54/Interview-Questions-2025 
