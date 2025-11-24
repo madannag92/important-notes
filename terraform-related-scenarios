@@ -95,6 +95,16 @@ Run the terraform import command to attach the existing settings of the resource
 4. Verify the import
 Run terraform show to verify that the import was successful. 
 ------------------------------------------------------
+what is drift in terraform
+
+Terraform drift is the difference between the actual state of your infrastructure and the state defined in your Terraform code and its state file. 
+It happens when changes are made to resources outside of the standard Terraform workflow, such as through a cloud provider's console or manual updates
+
+How drift occurs
+Manual changes: A user makes a change directly in the cloud provider's web console, API, or CLI without updating the Terraform code. For example, someone could manually re-enable public access on a storage bucket that was created with Terraform and has public access disabled in the code.
+Third-party automation: Scripts or other automation tools not managed by the Terraform workflow make changes to resources.
+Provider behavior: Cloud providers might change default settings or behaviors, creating a discrepancy between Terraform's understanding and the live resource
+------------------------------------------------------
 If Resources Were Created with Terraform but Then Modified Manually in AWS
 
 Let’s say you originally created the EC2 instance and security group using Terraform, but you manually modified them in the AWS console (e.g., added more rules to the SG or changed the EC2 instance type).
