@@ -21,7 +21,7 @@ Both ALB and NLB support multi-AZ deployment and will distribute traffic across 
 
 *For high-performance, low-latency applications, NLB would be more appropriate.
 ---------------------------------------
-What is 3 tier architecture in aws
+*What is 3 tier architecture in aws
 
 3-Tier Architecture in AWS refers to a classic application design pattern where the application is divided into three logical layers, each with its own responsibility. This pattern is widely used for scalability, security, and maintainability.
 
