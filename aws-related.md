@@ -20,6 +20,40 @@ Both ALB and NLB support multi-AZ deployment and will distribute traffic across 
 *For web applications and HTTP-based services, ALB is typically preferred.
 
 *For high-performance, low-latency applications, NLB would be more appropriate.
+---------------------------------------
+What is 3 tier architecture in aws
+
+3-Tier Architecture in AWS refers to a classic application design pattern where the application is divided into three logical layers, each with its own responsibility. This pattern is widely used for scalability, security, and maintainability.
+
+✅ The Three Tiers
+Presentation Layer (Front-End)
+
+Purpose: Handles the user interface and client-side logic.
+AWS Services:
+
+Amazon S3 (for hosting static websites)
+Amazon CloudFront (CDN for faster delivery)
+Elastic Load Balancer (ELB) (distributes traffic to web servers)
+EC2 or AWS Elastic Beanstalk (for dynamic web apps)
+
+Application Layer (Business Logic)
+
+Purpose: Processes requests, applies business rules, and interacts with the database.
+AWS Services:
+
+Amazon EC2 (compute instances for app servers)
+AWS Lambda (serverless functions for logic)
+Elastic Beanstalk (managed app deployment)
+
+Data Layer (Database)
+
+Purpose: Stores and retrieves application data.
+AWS Services:
+
+Amazon RDS (Relational Database Service)
+Amazon Aurora (high-performance relational DB)
+Amazon DynamoDB (NoSQL database)
+Amazon ElastiCache (caching layer for performance)
 
 ---------------------------------------
 what is difference between inline and managed policies in AWS IAM?
