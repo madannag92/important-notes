@@ -23,6 +23,81 @@ spec:
         image: my-app:v2
 
 ```
+### **Q: What is a ngnix?**
+
+**A:**  Nginx is not just a web server; it also functions as a reverse proxy, load balancer, and HTTP cache. Here are some of its primary features:
+
+Reverse Proxy: Nginx can act as an intermediary for requests from clients seeking resources from other servers. This helps in load distribution and improves performance.
+
+Load Balancing: It distributes incoming client requests across multiple servers to ensure no single server is overwhelmed, thus enhancing reliability and uptime.
+
+Caching: Nginx can store copies of frequently requested resources, reducing the need to fetch them from the origin server repeatedly.
+
+Handling Static Content: It efficiently serves static files, such as images, CSS, and JavaScript, making it ideal for websites with a lot of static content.
+
+Event-Driven Architecture: Nginx uses an asynchronous, event-driven approach to handle requests, allowing it to manage many connections with minimal resource usage.
+
+### **Q: What is kubeconfig file?**
+
+**A:**  It tells kubectl which cluster to talk to, how to authenticate, and what context to use.
+You can manage multiple clusters and user credentials in a single file.
+
+### **Q: what is cluster autoscaling?**
+
+**A:**Cluster Autoscaling in Kubernetes refers to the ability to automatically adjust the number of nodes in a cluster based on resource demands. It ensures that your cluster has enough capacity to run workloads efficiently without wasting resources.
+
+How It Works
+
+Kubernetes uses the Cluster Autoscaler component.
+It monitors pending pods (pods that cannot be scheduled due to insufficient resources).
+If pods cannot be scheduled:
+
+Scale Up: Adds nodes to the cluster.
+
+
+If nodes are underutilized for a certain time:
+
+Scale Down: Removes nodes to save costs.
+
+### **Q: How does pods understand the concept of HPA ?**
+
+**A:**
+HPA monitors metrics
+It checks CPU utilization, memory, or custom metrics for pods managed by a Deployment, ReplicaSet, or StatefulSet.
+Metrics come from the Metrics Server.
+
+HPA adjusts the replica count
+
+If average CPU usage exceeds the target (e.g., 80%), HPA increases the number of replicas.
+If usage is below the target, it scales down.
+
+
+Pods are created or removed by the controller
+
+The Deployment or ReplicaSet creates new pods when HPA increases replicas.
+Pods themselves are unaware—they just run as usual.
+Example:
+
+
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: my-app-hpa
+  namespace: default
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: my-app-deployment
+  minReplicas: 2
+  maxReplicas: 10
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 80
 
 ### **Q: How do you troubleshoot CrashLoopBackOff errors?**
 
@@ -82,6 +157,7 @@ tolerations:
   operator: "Equal"
   value: "value"
   effect: "NoSchedule"
+
 
 ```
 
