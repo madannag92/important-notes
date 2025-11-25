@@ -78,6 +78,7 @@ The Deployment or ReplicaSet creates new pods when HPA increases replicas.
 Pods themselves are unaware—they just run as usual.
 Example:
 
+```jsx
 
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -98,6 +99,10 @@ spec:
         target:
           type: Utilization
           averageUtilization: 80
+
+
+```
+
 
 ### **Q: How do you troubleshoot CrashLoopBackOff errors?**
 
