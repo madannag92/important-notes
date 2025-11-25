@@ -30,30 +30,38 @@ Presentation Layer (Front-End)
 
 Purpose: Handles the user interface and client-side logic.
 AWS Services:
-
 Amazon S3 (for hosting static websites)
 Amazon CloudFront (CDN for faster delivery)
 Elastic Load Balancer (ELB) (distributes traffic to web servers)
 EC2 or AWS Elastic Beanstalk (for dynamic web apps)
+Uses:
+Public Subnet: Place web servers or load balancers in a public subnet.
+AWS WAF (Web Application Firewall): Protect against common web exploits (SQL injection, XSS).
+TLS/SSL: Use AWS Certificate Manager for HTTPS.
 
 Application Layer (Business Logic)
-
 Purpose: Processes requests, applies business rules, and interacts with the database.
 AWS Services:
-
 Amazon EC2 (compute instances for app servers)
 AWS Lambda (serverless functions for logic)
 Elastic Beanstalk (managed app deployment)
+Uses:
+Private Subnet:App servers should not be directly accessible from the internet.
+Security Groups:Allow traffic only from the Presentation Layer (e.g., ELB SG).
+IAM Roles:Grant least privilege for accessing other AWS services.
 
 Data Layer (Database)
-
 Purpose: Stores and retrieves application data.
 AWS Services:
-
 Amazon RDS (Relational Database Service)
 Amazon Aurora (high-performance relational DB)
 Amazon DynamoDB (NoSQL database)
 Amazon ElastiCache (caching layer for performance)
+Uses:
+Private Subnet:Database should never be in a public subnet.
+Security Groups:Allow traffic only from the Application Layer.
+Encryption:Enable RDS encryption at rest and TLS in transit.
+Backup & Recovery: Use RDS automated backups and snapshots.
 
 ---------------------------------------
 what is difference between inline and managed policies in AWS IAM?
