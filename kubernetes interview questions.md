@@ -87,6 +87,19 @@
 22. Invalid Labels or Selectors:
  - Ensure correct labels and selectors in resources.
  - Use kubectl get with appropriate labels.
+------------------------------------------------------------------
+
+## Stateful vs. Stateless in Kubernetes
+
+| Feature | Stateless | Stateful |
+| :--- | :--- | :--- |
+| **K8s Controller** | `Deployment` | `StatefulSet` |
+| **Pod Identity** | Random hash (e.g., `web-7a8b9c`) | Fixed & Ordered (e.g., `db-0`, `db-1`) |
+| **Storage** | Ephemeral (lost when pod dies) | Persistent (sticks to specific pod ID) |
+| **Interchangeability** | Yes. Like "Cattle" (replaceable). | No. Like "Pets" (unique). |
+| **Scaling Strategy** | Parallel (all at once) | Ordered (Sequential 0→1→2) |
+| **Networking** | Single Service IP (Load Balanced) | Unique DNS per pod (Headless Service) |
+| **Use Case** | Web Servers, Microservices | Databases, Message Queues (Kafka) |
 
 -------------------------------------------------------------------
 
