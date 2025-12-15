@@ -163,12 +163,12 @@ tolerations:
   value: "value"
   effect: "NoSchedule"
 
-
+```
 
 ### **Q: what is diff between deployment and statefullset**
 
 Deployment manages stateless apps (like web servers) with interchangeable pods, random naming, and shared storage, ideal for scaling; whereas StatefulSet handles stateful apps (like databases) requiring unique identities, ordered deployment/scaling (e.g., db-0, db-1), stable storage per pod, and headless services for consistent communication
-```
+
 
 ---
 
