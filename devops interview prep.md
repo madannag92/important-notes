@@ -169,9 +169,12 @@ tolerations:
 
 Deployment manages stateless apps (like web servers) with interchangeable pods, random naming, and shared storage, ideal for scaling; whereas StatefulSet handles stateful apps (like databases) requiring unique identities, ordered deployment/scaling (e.g., db-0, db-1), stable storage per pod, and headless services for consistent communication
 
+---
+### **Q: what is ingress controller?**
+
+An Ingress Controller in Kubernetes is a specialized Layer 7 load balancer that manages external access to services within a cluster, acting as an intelligent entry point by routing HTTP/HTTPS traffic to the correct internal pods based on hostnames and paths defined in Ingress rules
 
 ---
-
 ## Ansible
 
 ### **Q: How do you handle dynamic inventory in Ansible?**
