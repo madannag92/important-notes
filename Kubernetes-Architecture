@@ -1,45 +1,8 @@
-🚀 Kubernetes Architecture Overview 🚀
-
-Kubernetes is the gold standard for container orchestration. It simplifies the process of deploying, scaling, and managing containerized applications. But what’s happening under the hood? Let's break down the key components of the Kubernetes Architecture.
-
-🧩 1. Master Node:
-The control plane that manages the entire cluster. It runs essential components like:
-
-* API Server: The gateway for communication between clients and the Kubernetes system.
-* Scheduler: Assigns tasks to worker nodes.
-* Controller Manager: Oversees the state of the system, ensuring the desired state matches the actual state.
-
-⚙️ 2. Worker Nodes:
-These nodes run the actual applications and are managed by the Master Node. Key components include:
-
-* Kubelet: Ensures containers are running in Pods as per the specification.
-* Kube Proxy: Maintains network rules, enabling communication across the cluster.
-* Container Runtime: Responsible for running containers (e.g., Docker, containerd).
-
-🔒 3. etcd:
-A distributed key-value store that holds all the cluster's state data and configurations, enabling Kubernetes to always know the state of the system.
-
-🔄 4. Pods & Deployments:
-Pods are the smallest deployable units in Kubernetes, and Deployments manage the scaling and rolling updates of Pods to ensure high availability.
-
 ------------------------------------------------------------------------------------
 💡 Kubernetes provides automation and scalability for applications, whether on-premise or in the cloud, empowering teams to focus on innovation rather than managing infrastructure.
 ------------------------------------------------------------------------------------
 
-sidebar_position	title	description	tags	keywords	slug
-1
-Kubernetes Introduction
-A guide to Kubernetes, a container orchestration tool.
-Kubernetes
-Container Orchestration
-DevOps
-Kubernetes
-Container Orchestration
-DevOps
-/kubernetes
-Kubernetes Components - architecture
-Kube-component
-
+🚀 Kubernetes Architecture Overview 🚀
 Simpler Image
 Cluster
 Cluster is collection of nodes. The nodes can be grouped into two categories, Control Plane and Data Plane. The Control Plane is responsible for runining all the Kubernetes components. The Data Plane is responsible for running the application (our application).
