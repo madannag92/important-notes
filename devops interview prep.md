@@ -94,6 +94,16 @@ If nodes are underutilized for a certain time:
 
 Scale Down: Removes nodes to save costs.
 
+### **Q: what is difference between module and resource in terraform?**
+**A:**
+**Resource** is the most basic component of the Terraform language. It describes one specific infrastructure object that exists in your cloud provider.
+* **Purpose:** To manage the lifecycle of a single piece of hardware or software (Create, Read, Update, Delete).
+A **Module** is a collection of .tf files in a single directory. Even a directory with just one resource is technically a "Root Module." However, the term usually refers to Child Modules used to group resources for reusability.
+
+
+Think of a Resource as a single brick, and a Module as a pre-fabricated wall. You use bricks to build the wall, and then you can use that wall design repeatedly to build an entire house.
+
+
 ### **Q: How does pods understand the concept of HPA ?**
 
 **A:**
