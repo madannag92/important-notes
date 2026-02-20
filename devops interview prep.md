@@ -340,6 +340,26 @@ module "vpc" {
 
 **A:** Use multi-AZ deployments for RDS, load balancing across multiple AZs, and auto-scaling groups.
 
+## Core Architectural Components
+
+*   **Global Traffic Management**: Use [Amazon Route 53](https://aws.amazon.com) with health checks to route users to the healthy regional endpoint.
+*   **Edge Acceleration**: Implement [Amazon CloudFront](https://aws.amazon.com) to cache static assets globally, reducing latency and offloading traffic from the origin servers.
+*   **External Entry Point**: Deploy an [Application Load Balancer (ALB)](https://aws.amazon.com) across multiple **Public Subnets**.
+*   **Isolated Compute**: Place EC2 instances in **Private Subnets** across at least two AZs to prevent direct internet exposure.
+*   **Self-Healing Scaling**: Use an [Auto Scaling Group (ASG)](https://aws.amazon.com) to maintain a "Desired Capacity" by automatically replacing failed instances.
+*   **Resilient Data Layer**: Provision an [Amazon RDS (Multi-AZ)](https://aws.amazon.com) instance with synchronous replication to a standby in a separate AZ.
+*   **Secure Outbound Access**: Deploy a [NAT Gateway](https://docs.aws.amazon.com) in each AZ to allow private instances to reach the internet for updates without being reachable from the outside.
+
+---
+
+## High Availability Strategies
+
+*   **Stateless Application Design**: Ensure user sessions are stored in [Amazon ElastiCache (Redis)](https://aws.amazon.com) rather than locally on the EC2 instance, allowing users to move between instances seamlessly.
+*   **Automatic Failover**: Configure the ALB to perform regular health checks. If an instance or an entire AZ fails, the ALB stops routing traffic to that zone instantly.
+*   **Database Redundancy**: RDS Multi-AZ ensures that if the primary database fails, AWS automatically flips the CNAME record to the standby instance in under 60 seconds.
+*   **Cross-AZ Distribution**: Use [Pod Topology Spread Constraints](https://kubernetes.io) (if using EKS) or ASG placement logic to ensure an even distribution of workloads across zones.
+*   **Shared Storage**: Use [Amazon EFS](https://aws.amazon.com) for file storage that needs to be accessible by all instances across all AZs simultaneously.
+
 ### **Q: What is the difference between an Internet Gateway and a NAT Gateway?**
 
 **A:** Internet Gateway allows public access, while NAT Gateway enables private subnet instances to access the internet without inbound access.
