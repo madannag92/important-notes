@@ -37,6 +37,41 @@ Handling Static Content: It efficiently serves static files, such as images, CSS
 
 Event-Driven Architecture: Nginx uses an asynchronous, event-driven approach to handle requests, allowing it to manage many connections with minimal resource usage.
 
+### **Q: What is a ingress and what is difference between ingress and loadbalancer?**
+**A:**  Ingress is an API object that manages external access to services within a cluster, typically via HTTP and HTTPS. It acts as a "smart router" or entry point, allowing you to define rules to route traffic to multiple internal services based on hostnames or URL paths. 
+
+Key Differences: Kubernetes Ingress vs. LoadBalancer
+
+While both expose services to external traffic, they operate at different layers of the networking stack and offer varying levels of control.
+
+## Comparison Table
+
+
+| Feature | LoadBalancer Service | Ingress (Resource + Controller) |
+| :--- | :--- | :--- |
+| **Network Layer** | **Layer 4** (TCP/UDP) | **Layer 7** (HTTP/HTTPS) |
+| **Routing Logic** | One-to-one (IP per service) | One-to-many (Host & Path based) |
+| **Cloud Cost** | **High** (Pay per service/IP) | **Low** (Shared IP for many services) |
+| **SSL/TLS** | Handled at the application/pod | Managed at the [Ingress Controller](https://kubernetes.io) |
+| **Complexity** | Simple / Plug-and-play | Requires setup of a Controller (e.g., NGINX) |
+
+## Summary of Usage
+
+### 1. LoadBalancer
+The [LoadBalancer service type](https://kubernetes.io) is the standard way to expose a service to the internet. 
+* **Best for:** Single services, non-web protocols, or when you need a dedicated IP.
+* **Drawback:** Every service gets its own cloud load balancer, which can quickly become expensive on platforms like [AWS](https://aws.amazon.com) or [Google Cloud](https://cloud.google.com).
+
+### 2. Ingress
+[Ingress](https://kubernetes.io) acts as a smart proxy or gateway sitting in front of your services.
+* **Best for:** Complex web applications with multiple microservices (e.g., `://domain.com` vs `://domain.com`).
+* **Benefit:** Consolidates routing rules into a single resource, reducing costs and centralizing SSL certificate management.
+
+---
+*Note: In production, you typically point a single **LoadBalancer** at your **Ingress Controller** to bridge the gap between the cloud network and your cluster rules.*
+
+
+
 ### **Q: What is kubeconfig file?**
 
 **A:**  It tells kubectl which cluster to talk to, how to authenticate, and what context to use.
