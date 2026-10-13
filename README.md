@@ -7,7 +7,7 @@ https://eksctl.io/getting-started/ -> eks related documentation, https://kagent.
 
 Resume building websites -> www.resumegenius.com, www.kaagaz.app, https://resume.io/,https://resumegemini.com/
 
-Interview prep websites -> www.finalroundai.com
+
 
 https://github.com/elder-plinius/G0DM0D3
 
@@ -15,7 +15,7 @@ https://github.com/metadist/synaplan?rdt_cid=5939108921041222935
 
 generatech.ai -> best website for all in one AI dashboard
 
-https://easyjobai.com/ -> job portal
+
 
 https://www.cloudsketcher.com/index.html -> very good website for cloudformation and terraform templates
 
