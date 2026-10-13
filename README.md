@@ -38,14 +38,7 @@ https://www.freecodecamp.org/ -> good website for research and knowledge related
 
 https://usefulai.com/tools -> usefull tool related to AI.
 
-This is related to most of the devops tools and concepts. Below is the link of Road map of Devops
 
-
-https://pranjalidevops.substack.com/p/daily-interview-question
-
-
-
-https://github.com/cirocosta/sample-docker-registry-aws/tree/master
 
 
 
