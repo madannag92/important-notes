@@ -5,7 +5,7 @@ www.topmate.io, jumbl
 
 https://eksctl.io/getting-started/ -> eks related documentation, https://kagent.dev/
 
-Resume building websites -> www.resumegenius.com, www.kaagaz.app, https://resume.io/,https://resumegemini.com/
+
 
 
 
