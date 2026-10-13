@@ -11,6 +11,8 @@ Interview prep websites -> www.finalroundai.com
 
 https://github.com/elder-plinius/G0DM0D3
 
+https://github.com/metadist/synaplan?rdt_cid=5939108921041222935
+
 generatech.ai -> best website for all in one AI dashboard
 
 https://easyjobai.com/ -> job portal
