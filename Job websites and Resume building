@@ -1,78 +1,105 @@
-https://github.com/itskie/jobhunter -> Linkedin Plugin
+# 🚀 Awesome Job Hunter & Career Toolkit
 
-Interview prep websites -> www.finalroundai.com, https://prachub.com/
+A curated directory of tools, AI prompts, resume builders, and niche platforms designed to streamline tech job hunting, interview preparation, and application workflows.
 
-Resume building websites
-www.resumegenius.com, 
-www.kaagaz.app, 
-https://resume.io/,
-https://resumegemini.com/
-https://github.com/mzupan/tech-resume
-https://hireraft.io/
-https://jobowl.co/
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-https://github.com/mzupan/tech-resume - cli tool for building resume
----------------------------------------
-Prompts for Building the best resume
+---
 
-https://www.promptingguide.ai/techniques/meta-prompting
+## 📑 Table of Contents
 
-https://medium.com/codetodeploy/15-claude-prompts-for-resume-writing-that-actually-get-you-interviews-f40c0393f561
+- [Browser Extensions & Automation](#-browser-extensions--automation)
+- [Resume Builders & Tools](#-resume-builders--tools)
+- [Resume Engineering & AI Prompts](#-resume-engineering--ai-prompts)
+- [Interview Preparation](#-interview-preparation)
+- [Job Discovery & Hiring Platforms](#-job-discovery--hiring-platforms)
+  - [AI & Auto-Apply Portals](#ai--auto-apply-portals)
+  - [Tech & Developer Job Boards](#tech--developer-job-boards)
+  - [Startup Ecosystem Maps](#startup-ecosystem-maps)
+  - [Compensation & Market Intelligence](#compensation--market-intelligence)
+- [Contributing](#-contributing)
 
-https://academy.techpresso.co/prompts/claude-prompts-resume
+---
 
-https://blog.loopcv.pro/best-claude-prompts-for-job-applications/
+## 🧩 Browser Extensions & Automation
 
-https://www.reddit.com/r/PromptEngineering/comments/1saa1z4/i_wrote_a_systemprompt_for_creating_and_editing/
-----------------------------------------
-Hiring websites 
+* [JobHunter (GitHub)](https://github.com/itskie/jobhunter) — Open-source LinkedIn helper plugin for filtering and automating application tasks.
+* [AutoApplyJobs](https://autoapplyjobs.in/) — Automated job application software tailored for tech candidates.
+* [EasyJob AI](https://easyjobai.com/) — AI copilot for auto-filling and accelerating job applications.
 
-https://easyjobai.com/
+---
 
-https://careerflowcv.com/
+## 📄 Resume Builders & Tools
 
-levels.fyi
+### CLI & Developer Tools
+* [tech-resume (GitHub)](https://github.com/mzupan/tech-resume) — Command-line tool to build, version-control, and compile software engineering resumes.
 
-https://www.tickbig.com/
+### Web Builders
+* [Kaagaz Resume](https://www.kaagaz.app/) — Lightweight, clean resume creation tool.
+* [Resume.io](https://resume.io/) — Polished, ATS-friendly web resume builder with customizable templates.
+* [Resume Genius](https://resumegenius.com/) — Step-by-step resume and cover letter builder.
+* [ResumeGemini](https://resumegemini.com/) — AI-assisted resume formatting and editing.
+* [HireRaft](https://hireraft.io/) — Dynamic resume personalization and review suite.
+* [JobOwl](https://jobowl.co/) — Resume customization aligned with job descriptions.
 
-https://myjobb.ai/
+---
 
-https://www.careerhound.io/job-search/all?categories=technology
+## 🧠 Resume Engineering & AI Prompts
 
-https://hireft.com/
+Curated frameworks and system prompts to tailor resumes using LLMs (Claude, ChatGPT):
 
-https://krawlr.xyz/
+* [DAIR.AI Meta-Prompting Guide](https://www.promptingguide.ai/techniques/meta-prompting) — Core architectural guide to orchestrating meta-prompts for output refinement.
+* [15 Claude Prompts for Resume Writing](https://medium.com/codetodeploy/15-claude-prompts-for-resume-writing-that-actually-get-you-interviews-f40c0393f561) — Field-tested prompts targeting metric-driven achievement statements.
+* [Techpresso Resume Prompts](https://academy.techpresso.co/prompts/claude-prompts-resume) — Modular prompting templates for technical work histories.
+* [LoopCV Guide to LLM Applications](https://blog.loopcv.pro/best-claude-prompts-for-job-applications/) — Strategy guide for parsing role criteria with LLMs.
+* [Production Resume System Prompt (Reddit)](https://www.reddit.com/r/PromptEngineering/comments/1saa1z4/i_wrote_a_systemprompt_for_creating_and_editing/) — Production-ready markdown system prompt for editing technical CVs.
 
-https://www.bangalorestartupmap.com/
+---
 
-https://www.blrstartuparena.com/map
+## 🎯 Interview Preparation
 
-https://myjobb.ai/
+* [Final Round AI](https://www.finalroundai.com/) — Real-time interview copilot providing live guidance and mock sessions.
+* [PracHub](https://prachub.com/) — Interactive technical interview practice and question bank.
+* [SkillMeet AI](https://skillmeet.ai/) — AI-driven skill evaluation and interview simulator.
+* [MentorBook](https://www.mentorbook.in/) — Direct 1:1 mentorship and mock interview platform.
 
-https://landoffer.ai/?utm_source=reddit&utm_medium=community&utm_campaign=landoffer
+---
 
-https://layoffsandhires.com/
+## 🌐 Job Discovery & Hiring Platforms
 
-https://www.mentorbook.in/
+### AI & Auto-Apply Portals
+* [Arya by Mentoria](https://arya.mentoria.com/) — AI job hunting and career pathway assistant.
+* [MyJobb AI](https://myjobb.ai/) — Intelligent role matcher mapping skill graphs to open roles.
+* [LandOffer AI](https://landoffer.ai/) — End-to-end application tracking and recommendation suite.
+* [HireDue](https://hiredue.com/) — Direct recruiter outreach and match automation.
+* [HireFT](https://hireft.com/) — Automated full-time placement matching.
 
-https://www.instahyre.com/candidate/opportunities/?matching=true
+### Tech & Developer Job Boards
+* [HiringCafe](https://hiringcafe.com/) — Aggregator pulling clean, un-scraped jobs straight from company ATS portals.
+* [Instahyre](https://www.instahyre.com/) — Curated tech hiring platform connecting candidates with matching recruiters.
+* [Cutshort](https://cutshort.io/) — AI-powered hiring network widely used by Indian tech startups and product companies.
+* [Remote Rocketship](https://www.remoterocketship.com/) — Real-time directory for verified remote engineering roles.
+* [CareerHound](https://www.careerhound.io/job-search/all?categories=technology) — Categorized tech and engineering career explorer.
+* [Careerflow](https://careerflowcv.com/) — Comprehensive CRM and pipeline tracker for job applications.
+* [JobLeads](https://www.jobleads.com/) — Executive and senior engineering job discovery.
+* [TickBig](https://www.tickbig.com/) — Opportunity curation and candidate outreach engine.
+* [Krawlr](https://krawlr.xyz/) — Fast crawler indexing direct career pages.
 
-cutshort.io
+### Startup Ecosystem Maps
+* [Bangalore Startup Map](https://www.bangalorestartupmap.com/) — Interactive map visualizing tech startup density across Bengaluru.
+* [BLR Startup Arena](https://www.blrstartuparena.com/map) — Curated directory and geographical index of Indian tech companies.
 
-https://skillmeet.ai/home
+### Compensation & Market Intelligence
+* [Levels.fyi](https://www.levels.fyi/) — Verified salary benchmarks, leveling comparisons, and total compensation breakdowns.
+* [Layoffs & Hires](https://layoffsandhires.com/) — Real-time tracking of hiring sprees, reductions, and headcount changes.
 
-https://hiredue.com/
+---
 
-https://hiringcafe.com/?searchState=%7B%22searchQuery%22%3A%22devops+engineer%22%7D
+## 🤝 Contributing
 
-https://www.remoterocketship.com/?ref=ajit
-
-https://arya.mentoria.com/lp/ai-job-hunter?utm_source=facebook&utm_medium=cpc&utm_campaign=Arya_ACQ_Lead_July2026+%28v2%29&utm_term=Arya_ACQ_Lead_24-44_Statics+%28Aug_2026%29&utm_content=carousel_reddit-snippets&fbclid=PAaWdyZAU967FleHRuA2FlbQEwAHBkb2YCYWRpZAGrMZJvm4irc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGnf0duueqN4DRJ9JWcjyznF5eCdf7f98rLxHzzbYfH2toMoXJbuWbKB06IWt4_aem_NG4J5-xzgyY5MXDhVdVhjw&utm_id=120242863799210395
-
-https://autoapplyjobs.in/?utm_source=meta_ads&utm_medium=paid&utm_campaign=sales_tech_corridors&fbclid=PAaWdyZAU8mpBleHRuA2FlbQEwAHBkb2YCYWRpZAGrNrn7JdaHc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn-X5dDQ6EjiFbgipDd45SsV7ItvPTV-FSOeUFnAXD4pf7DOQ5rfvDLauvP9M_aem_hnN-QzQVBMpBpem0nIxheA&utm_id=120249940381080743&utm_content=120249940381070743&utm_term=120249940381060743
-
-https://lp.jobleads.com/lp-headhunter-2026-01-v2?utm_source=google-ads_in-search_IN__&utm_content=DemandGen%7CHH%7CEN%7CIN__demand-gen_99&utm_medium=display-ad&utm_campaign=DemandGen%7CHH%7CEN%7CIN&gad_source=1&gad_campaignid=24206142700&gclid=CjwKCAjw0LzWBhBOEiwAKQd0cNatTA5lvyK9MYS1DnHBGW1C03Q3eODPTE3GS-u656OpTyt8kDjamBoCMCUQAvD_BwE
-
-
-
-
+Contributions are welcome! Please ensure:
+1. All tracking query parameters (`utm_*`, `ref`, `fbclid`, `gclid`) are removed before submission.
+2. The platform is active and functional.
+3. Keep descriptions concise and non-promotional.
