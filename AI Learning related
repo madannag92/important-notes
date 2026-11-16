@@ -1,56 +1,34 @@
-# AI, Cloud & Developer Resources
+# 🔗 AI & Dev Bookmarks
 
-A curated collection of study guides, AI engineering repositories, agent frameworks, and developer tools.
+### ☁️ AWS AI Practitioner (AIF-C01)
+- **[AWS Skill Builder: AIF-C01 Prep](https://skillbuilder.aws/learning-plan/3NRN71QZR2/exam-prep-plan-aws-certified-ai-practitioner-aifc01--english/FBV4STG94B)** — Official AWS exam learning plan
+- **[AWS AI Practitioner Study Notes](https://github.com/kananinirav/aws-certified-ai-practitioner-study-notes/tree/master)** — Domain-by-domain exam notes
+- **[AIF-C01 Study Repo](https://github.com/jwalsh/aif-c01)** — Extra notes & exam references
 
----
+### 🤖 AI Engineering & Agents
+- **[AI Engineering From Scratch](https://aiengineeringfromscratch.com/)** — Core AI engineering foundations
+- **[AI Engineering Hub](https://github.com/patchy631/ai-engineering-hub)** — Hands-on LLM, RAG & agent tutorials
+- **[500 AI Agents Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects)** — Open-source agent ideas & code
+- **[Learn Harness Engineering](https://github.com/walkinglabs/learn-harness-engineering)** — Building reliable agent harnesses
+- **[AI Agents for Beginners](https://www.freecodecamp.org/news/ai-agents-for-beginners/)** — Step-by-step beginner guide
+- ** https://github.com/patchy631/ai-engineering-hub
 
-## AWS Certified AI Practitioner (AIF-C01)
+### ⚡ Claude Code & Workflows
+- **[Superpowers](https://github.com/obra/superpowers)** — Agentic skills & dev workflow framework
+- **[Claude Code Skills Directory](https://aiparabellum.com/claude-code-skills-directory/)** — Searchable Claude Code skills
+- **[Claude How-To](https://github.com/luongnv89/claude-howto)** — Practical prompts & workflows
 
-| Resource | Focus Area | Link |
-| :--- | :--- | :--- |
-| **AWS Skill Builder: AIF-C01 Exam Prep Plan** | Official AWS learning plan and exam preparation roadmap | [AWS Skill Builder](https://skillbuilder.aws/learning-plan/3NRN71QZR2/exam-prep-plan-aws-certified-ai-practitioner-aifc01--english/FBV4STG94B) |
-| **AWS Certified AI Practitioner Study Notes** | Comprehensive community study notes covering AIF-C01 exam domains | [GitHub](https://github.com/kananinirav/aws-certified-ai-practitioner-study-notes/tree/master) |
-| **AIF-C01 Study Repository** | Additional notes, references, and exam prep material for AIF-C01 | [GitHub](https://github.com/jwalsh/aif-c01) |
+### 🛠️ AI Tools & App Builders
+- **[Useful AI Tools](https://usefulai.com/tools)** — Directory of AI productivity & dev tools
+- **[Bolt.new](https://bolt.new/)** — In-browser AI full-stack app builder
+- **[The Gigabrain](https://thegigabrain.com/)** — AI search across Reddit discussions
+- **[Bit](https://bit.dev/)** — Modular component development platform
 
-## AI Engineering & AI Agents
+### 📚 Learning & Cheat Sheets
+- **[freeCodeCamp](https://www.freecodecamp.org/)** — Free coding courses & articles
+- **[Free AI Course Finder](https://bryan-free-ai-course-finder.sassy-wood-4767.chatgpt.site/)** — Search free AI courses
+- **[Cheat-Sheets.org](https://cheat-sheets.org/)** — Quick syntax & tool cheat sheets
 
-| Resource | Focus Area | Link |
-| :--- | :--- | :--- |
-| **AI Engineering From Scratch** | Foundational guide to learning modern AI engineering concepts | [Website](https://aiengineeringfromscratch.com/) |
-| **AI Engineering Hub** | Hands-on tutorials and implementations for LLMs, RAG, and AI agents | [GitHub](https://github.com/patchy631/ai-engineering-hub) |
-| **500 AI Agents Projects** | Curated collection of AI agent use cases and open-source implementations | [GitHub](https://github.com/ashishpatel26/500-AI-Agents-Projects) |
-| **Learn Harness Engineering** | Guide to designing and building reliable harnesses around AI agents | [GitHub](https://github.com/walkinglabs/learn-harness-engineering) |
-| **freeCodeCamp: AI Agents for Beginners** | Beginner-friendly walkthrough of how AI agents work and how to build them | [Article](https://www.freecodecamp.org/news/ai-agents-for-beginners/) |
-| https://github.com/patchy631/ai-engineering-hub
-
-## Claude Code & Agentic Workflows
-
-| Resource | Focus Area | Link |
-| :--- | :--- | :--- |
-| **Superpowers** | Agentic skills framework and structured development workflow for coding agents | [GitHub](https://github.com/obra/superpowers) |
-| **Claude Code Skills Directory** | Searchable directory of reusable skills for Claude Code | [Website](https://aiparabellum.com/claude-code-skills-directory/) |
-| **Claude How-To** | Practical guides, prompts, and workflows for getting more out of Claude | [GitHub](https://github.com/luongnv89/claude-howto) |
-
-## AI Tools & App Builders
-
-| Resource | Focus Area | Link |
-| :--- | :--- | :--- |
-| **Useful AI Tools** | Curated directory of AI tools across productivity, coding, and research | [Website](https://usefulai.com/tools) |
-| **Bolt.new** | AI-powered full-stack web app builder that runs directly in the browser | [Website](https://bolt.new/) |
-| **The Gigabrain** | AI search engine surfacing real discussions from Reddit and online communities | [Website](https://thegigabrain.com/) |
-| **Bit** | Composable software development platform for building modular components | [Website](https://bit.dev/) |
-
-## Learning Platforms & Reference
-
-| Resource | Focus Area | Link |
-| :--- | :--- | :--- |
-| **freeCodeCamp** | Free coding tutorials, certifications, and technical research articles | [Website](https://www.freecodecamp.org/) |
-| **Free AI Course Finder** | Discovery tool for finding free AI courses across platforms | [Website](https://bryan-free-ai-course-finder.sassy-wood-4767.chatgpt.site/) |
-| **Cheat-Sheets.org** | Quick-reference cheat sheets for programming languages, tools, and frameworks | [Website](https://cheat-sheets.org/) |
-
-## Other Projects & Certifications
-
-| Resource | Focus Area | Link |
-| :--- | :--- | :--- |
-| **Neo — All-in-One Bot** | Multi-purpose bot project repository | [GitHub](https://github.com/gokulraj381/Neo---all-in-one-bot) |
-| **CK-X Simulator** | Hands-on exam simulator for Kubernetes certifications (CKA, CKAD, CKS) | [GitHub](https://github.com/sailor-sh/CK-X) |
+### 🧩 Other Repos & Simulators
+- **[Neo — All-in-One Bot](https://github.com/gokulraj381/Neo---all-in-one-bot)** — Multi-purpose bot project
+- **[CK-X Simulator](https://github.com/sailor-sh/CK-X)** — Kubernetes exam practice (CKA / CKAD / CKS)
