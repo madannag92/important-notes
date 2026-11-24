@@ -1,124 +1,71 @@
-Prompt 1 — The Master Humanizer
+Part 1: AI Text Humanizer Prompts
+Curated from @jaxoncoder
 
-Most people type "make this human" and pray.
-This is the ONE prompt that fixes 80% of AI-sounding text in a single shot:
+1. The Master Humanizer
+Fixes 80% of AI-sounding text in a single shot instead of typing "make this human."
 
-"Act as a professional human editor and rewrite the following text so it sounds naturally written by a real person, not an AI. Keep the original meaning, but improve rhythm, flow, transitions, and tone. Avoid robotic phrasing, repetitive patterns, and overly formal wording. Text: [paste text]."
+Plaintext
+Act as a professional human editor and rewrite the following text so it sounds naturally written by a real person, not an AI. Keep the original meaning, but improve rhythm, flow, transitions, and tone. Avoid robotic phrasing, repetitive patterns, and overly formal wording. Text: [PASTE TEXT HERE].
+2. Natural Flow Humanizer
+Breaks the repetitive, metronome-like sentence rhythm common in AI output.
 
-Prompt 2 — Natural Flow Humanizer
+Plaintext
+Rewrite the following text [PASTE TEXT HERE] so the sentences connect more naturally and flow like authentic human writing. Vary sentence lengths, improve transitions, and remove any mechanical or formulaic phrasing.
+3. Conversational Tone Upgrade
+Keeps the depth and intelligence while dropping robotic stiffness.
 
-AI writes like a metronome. Same length. Same beat. Easy to spot.
-This prompt breaks that rhythm:
+Plaintext
+Rewrite the following text [PASTE TEXT HERE] in a natural conversational tone while keeping it intelligent and professional. Make it sound like a real person explaining ideas smoothly rather than an AI generating information.
+4. Sentence Variation
+Replaces monotonous long-sentence chains with punchy short lines mixed with longer, flowing thoughts.
 
-"Rewrite the following text [paste text] so the sentences connect more naturally and flow like authentic human writing. Vary sentence lengths, improve transitions, and remove any mechanical or formulaic phrasing."
+Plaintext
+Rewrite the following text [PASTE TEXT HERE] by introducing natural sentence variety, rhythm changes, occasional short punchy lines, and realistic phrasing patterns commonly found in human writing.
+5. AI Detector Weakness Reduction
+Removes predictability and overly polished patterns that trigger AI detection tools.
 
-Prompt 3 — Conversational Tone Upgrade
-Sounds smart ≠ sounds human.
+Plaintext
+Rewrite the following text [PASTE TEXT HERE] while reducing common AI-writing patterns such as repetitive structure, overly polished phrasing, excessive predictability, and unnatural consistency. Make the writing feel more human and organically imperfect.
+6. Clarity & Simplicity Humanizer
+Replaces unnecessarily complex vocabulary with effortless, clear language.
 
-This prompt keeps the intelligence — drops the robot:
+Plaintext
+Rewrite the following text [PASTE TEXT HERE] using clear, concise, and naturally flowing language that sounds effortless and human instead of overly optimized or artificially polished.
+7. Human Editing Simulation
+Applies a senior publication editor's final polish to turn a good draft into a publish-ready piece.
 
-"Rewrite the following text [paste text] in a natural conversational tone while keeping it intelligent and professional. Make it sound like a real person explaining ideas smoothly rather than an AI generating information."
+Plaintext
+Act as a senior editor reviewing AI-generated writing. Rewrite the following text [PASTE TEXT HERE] exactly the way an experienced human editor would refine a draft for publication while maintaining the original meaning.
+Part 2: CV & Resume Optimization Prompts
+Curated from @altiamkabir — Upload or paste your CV alongside these prompts.
 
-
-Jaxon
-@jaxoncoder
-·
-Jun 6
-Prompt 4 — Sentence Variation
-Long. Long. Long. Long.
-That's AI.
-
-Short. Then long, weaving an idea. Then short again.
-That's human.
-
-"Rewrite the following text [paste text] by introducing natural sentence variety, rhythm changes, occasional short punchy lines, and realistic phrasing patterns commonly found in human writing."
-
-
-Prompt 5 — AI Detector Weakness Reduction
-Detectors look for one thing: predictability.
-
-Kill that and you're invisible:
-
-"Rewrite the following text [paste text] while reducing common AI-writing patterns such as repetitive structure, overly polished phrasing, excessive predictability, and unnatural consistency. Make the writing feel more human and organically imperfect."
-
-Prompt 6 — Clarity & Simplicity Humanizer
-AI loves big words.
-
-Humans love clear words.
-
-"Rewrite the following text [paste text] using clear, concise, and naturally flowing language that sounds effortless and human instead of overly optimized or artificially polished."
-
-Prompt 7 — Human Editing Simulation
-
-The final filter. The one that turns "good" into "published":
-
-"Act as a senior editor reviewing AI-generated writing. Rewrite the following text [paste text] exactly the way an experienced human editor would refine a draft for publication while maintaining the original meaning."
------------------------------------------------------------------------------------
-prompts to make CV better
-
- Turn My CV Into an ATS-Friendly Resume
-
-"Analyze my uploaded CV and optimize it for Applicant Tracking Systems (ATS). Improve keywords, formatting, and section structure while keeping my experience accurate. Make it professional, concise, and recruiter-friendly."
-Altiam Kabir
-@altiamkabir
-·
-Nov 21
-2/ Find the Weak Points in My CV
-
-"Act as a senior recruiter with 15 years of hiring experience. Review my CV and identify 10 weaknesses that could reduce my interview chances. Explain each issue and provide an improved version."
-Altiam Kabir
-@altiamkabir
-·
-Nov 21
-3/ Rewrite My CV Like a Professional
-
-"Rewrite my uploaded CV to make it more compelling and results-focused. Replace weak descriptions with powerful action verbs, highlight measurable achievements where supported, and remove unnecessary information."
-Altiam Kabir
-@altiamkabir
-·
-Nov 21
-4/ Match My CV to Any Job Description
-
-"Compare my uploaded CV with this job description: [PASTE JOB DESCRIPTION]. Identify missing skills, relevant keywords, and experience gaps. Rewrite my CV to better match the role without inventing qualifications."
-Altiam Kabir
-@altiamkabir
-·
-Nov 21
-5/ Make My Work Experience Stand Out
-
-"Review the work experience section of my CV and rewrite every bullet point using the Action + Impact + Result framework. Highlight my contributions, leadership, and achievements without adding unsupported numbers."
-Altiam Kabir
-@altiamkabir
-·
-Nov 21
-6/ Create a Powerful Professional Summary
-
-"Based on my uploaded CV, write 3 compelling professional summaries tailored to my experience and career goals. Keep each under 60 words, emphasize my strongest qualifications, and avoid generic buzzwords."
-Altiam Kabir
-@altiamkabir
-·
-Nov 21
-7/ Predict My Interview Questions
-
-"Act as a hiring manager interviewing me based on my uploaded CV. Generate 15 realistic interview questions about my experience, skills, and achievements. Provide strong sample answers using only my actual background."
-Altiam Kabir
-@altiamkabir
-·
-Nov 21
-8/ Discover My Best Career Opportunities
-
-"Analyze my uploaded CV and recommend 10 job roles that best match my skills, qualifications, and experience. Rank them by suitability and explain what makes me a strong candidate for each position."
-Altiam Kabir
-@altiamkabir
-·
-Nov 21
-9/ Transform My CV Into a LinkedIn Profile
-
-"Turn my uploaded CV into a recruiter-friendly LinkedIn profile. Write a compelling headline, an engaging About section, optimized experience descriptions, and 15 relevant skills to improve my visibility."
-Altiam Kabir
-@altiamkabir
-·
-Nov 21
-10/ Give My CV a Brutal Recruiter Review
-
-"Act as a strict recruiter reviewing my CV for a competitive position. Score it out of 100 based on clarity, relevance, achievements, and ATS compatibility. Show me exactly what to fix and provide an improved final version."
+1. Turn My CV Into an ATS-Friendly Resume
+Plaintext
+Analyze my uploaded CV and optimize it for Applicant Tracking Systems (ATS). Improve keywords, formatting, and section structure while keeping my experience accurate. Make it professional, concise, and recruiter-friendly.
+2. Find the Weak Points in My CV
+Plaintext
+Act as a senior recruiter with 15 years of hiring experience. Review my CV and identify 10 weaknesses that could reduce my interview chances. Explain each issue and provide an improved version.
+3. Rewrite My CV Like a Professional
+Plaintext
+Rewrite my uploaded CV to make it more compelling and results-focused. Replace weak descriptions with powerful action verbs, highlight measurable achievements where supported, and remove unnecessary information.
+4. Match My CV to Any Job Description
+Plaintext
+Compare my uploaded CV with this job description: [PASTE JOB DESCRIPTION HERE]. Identify missing skills, relevant keywords, and experience gaps. Rewrite my CV to better match the role without inventing qualifications.
+5. Make My Work Experience Stand Out
+Plaintext
+Review the work experience section of my CV and rewrite every bullet point using the Action + Impact + Result framework. Highlight my contributions, leadership, and achievements without adding unsupported numbers.
+6. Create a Powerful Professional Summary
+Plaintext
+Based on my uploaded CV, write 3 compelling professional summaries tailored to my experience and career goals. Keep each under 60 words, emphasize my strongest qualifications, and avoid generic buzzwords.
+7. Predict My Interview Questions
+Plaintext
+Act as a hiring manager interviewing me based on my uploaded CV. Generate 15 realistic interview questions about my experience, skills, and achievements. Provide strong sample answers using only my actual background.
+8. Discover My Best Career Opportunities
+Plaintext
+Analyze my uploaded CV and recommend 10 job roles that best match my skills, qualifications, and experience. Rank them by suitability and explain what makes me a strong candidate for each position.
+9. Transform My CV Into a LinkedIn Profile
+Plaintext
+Turn my uploaded CV into a recruiter-friendly LinkedIn profile. Write a compelling headline, an engaging About section, optimized experience descriptions, and 15 relevant skills to improve my visibility.
+10. Give My CV a Brutal Recruiter Review
+Plaintext
+Act as a strict recruiter reviewing my CV for a competitive position. Score it out of 100 based on clarity, relevance, achievements, and ATS compatibility. Show me exactly what to fix and provide an improved final version.
